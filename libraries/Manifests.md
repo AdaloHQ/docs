@@ -33,6 +33,8 @@ Prop Keys:
 	- `"color"` - A color string, of form `#ffffff` or `#rgba(255, 255, 255, 1)`
 	- `"date"` - An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string (ex: "2018-01-01T00:00:00.000Z")
 	- `"action"`- An user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed.
+	- `"list"` - An array of dynamic data. See [Lists](#lists)
+
 * `control` (object, optional) - Customize the type of control presented to the user:
 	- `type` (string) - the type of control to use (see [Controls Reference](#controls-reference)
 	- `options` - dependent on `type` - see [Controls Reference](#controls-reference)
@@ -103,8 +105,76 @@ Then your component will receive the following props:
 }
 ```
 
-### Reference
+### Keys
 
 * `name` - the technical name of the child component
 * `displayName` - the name to display in the Proton editor
 * `props` - A list of props for the child compnoent. See [Props](#props)
+* `role` - The role of this child component. See [Lists](#lists)
+* `reference` - The `name` of a top-level prop to which this child component is related. See [Lists](#lists)
+
+## Lists
+
+Components that intend to display dynamic lists of content must conform to a particular format in order to receive the necessary information.
+
+### List Prop Type
+
+Lists must have one top-level prop of type `list`. The name of this prop will be referenced in child components.
+
+### Child Components
+
+`childComponents` items will be rendered inside list items should have the following keys:
+
+* `role: "listItem"` - this component will be rendered in each item of the list
+* `reference: "[YOUR_LIST_PROP]"` - the reference to the top-level prop of type `list`
+
+Then the props passed to your component will be nested within the list items of `[YOUR_LIST_PROP]` instead of at the top level.
+
+### Example
+
+The easiest way to understand this is by looking at a simple example. Let's say you are building a simple list component.
+
+#### manifest.json
+
+```
+{
+  ...
+  props: [
+    {
+      "name": "listItems",
+      "displayName": "Select list items",
+      "type": "list"
+    }
+  ],
+  "childComponents: [
+  	 {
+  	   "name": "itemTitle",
+  	   "role": "listItem",
+  	   "reference": "listItems",
+  	   "props": [
+  	     {
+  	       "name": "text",
+  	       "displayName": "Text",
+  	       "type": "text",
+  	       "default": "Some title text"
+  	     }
+  	   ]
+  	 }
+  ]
+}
+```
+
+### Props
+
+Then our component would receive the following props:
+
+```
+{
+  "listItems": [
+    "id": "1",
+    "itemTitle": {
+    	"text": "Some title text"
+    }
+  ]
+}
+```
