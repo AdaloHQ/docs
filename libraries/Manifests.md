@@ -121,14 +121,23 @@ Components that intend to display dynamic lists of content must conform to a par
 
 Lists must have one top-level prop of type `list`. The name of this prop will be referenced in child components.
 
+### Other Props
+
+Other top-level `props` that related to the `list` prop can be denoted with the following attributes:
+
+* `role: "listItem"`
+* `reference: "YOUR_LIST_PROP"`
+
+This is applicable to both actions and normal props. Then the props passed to your component will be nested under `YOUR_LIST_PROP`.
+
 ### Child Components
 
-`childComponents` items will be rendered inside list items should have the following keys:
+`childComponents` items can also be given the `role: "listItem"` and `ref` attributes to be considered list item props.
 
-* `role: "listItem"` - this component will be rendered in each item of the list
-* `reference: "[YOUR_LIST_PROP]"` - the reference to the top-level prop of type `list`
+* `role: "listItem"`
+* `reference: "YOUR_LIST_PROP"`
 
-Then the props passed to your component will be nested within the list items of `[YOUR_LIST_PROP]` instead of at the top level.
+Then the props passed to your component will be nested within the list items of `YOUR_LIST_PROP` instead of at the top level.
 
 ### Example
 
