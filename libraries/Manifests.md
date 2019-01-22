@@ -13,6 +13,9 @@ Keys:
 * `defaultHeight` (integer) - The height of a new component instance
 * `props` - (array of objects) - List of top-level props. See [Props](#props)
 * `childComponents` (array of objects) - List of child components. See [Child Components](#child-components)
+* `icon` (relative filepath) - The path to the icon for this component
+* `resizeX` (boolean, default: `true`) - Whether the component can be horizontally resized
+* `resizeY` (boolean, default: `false`) - Whether the component can be vertically resized
 
 ## Props
 
@@ -23,7 +26,8 @@ Prop Keys:
 * 	`name` - Technical name of the prop. This should be the same as the react component prop name
 *  `displayName` - The name to show in the Proton editor, and display to end user
 *  `enabled` - This is used to show or hide this specific prop based on the value of another prop. To use, pass an object with a single key (the prop name) and value (the desired value)
-	- For example `{"type": "outlined"}` would cause this particular prop to be hidden unless the prop named "type" had the value "outlined"
+	- For example `{"type": "outlined"}` would cause this particular prop to be disabled / invisible unless the prop named "type" had the value "outlined"
+* `hidden` - (default: `false`) - whether or not to show this prop in the UI. Useful for `formChangeHandler`'s, or anywhere that you want the default value to be passed.
 * `default` - The default value of this prop
 *  `type` - The type of value that is expected. Valid types include:
 	- `"text"` - Arbitrary text. This may be either static or dynamic.
@@ -32,14 +36,23 @@ Prop Keys:
 	- `"icon"` - The name of a material icon to use. For a full list of possible icon name, see the "MaterialIcons" section [here](https://oblador.github.io/react-native-vector-icons/)
 	- `"color"` - A color string, of form `#ffffff` or `#rgba(255, 255, 255, 1)`
 	- `"date"` - An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string (ex: "2018-01-01T00:00:00.000Z")
-	- `"action"`- An user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed.
 	- `"list"` - An array of dynamic data. See [Lists](#lists)
+	- `"action"`- An user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed.
 
 * `control` (object, optional) - Customize the type of control presented to the user:
 	- `type` (string) - the type of control to use (see [Controls Reference](#controls-reference)
 	- `options` - dependent on `type` - see [Controls Reference](#controls-reference)
+* `role` (string, optional) - designate this as a special prop.
+	- `"listItem"` - This prop will be a list child. See [Lists](#lists)
+	- `"formValue"` - This prop is the `value` of a controlled input.
+	- `"formChangeHandler"` - This prop is the `onChange` of a controlled input. `type` should be `"action"`.
+* `reference` (string, optional) - used in conjunction with `role` to reference a related prop.
+	- If role is `"listItem"` this should be a prop with `type: "list"`
+	- If role is `"formChangeHandler"` this should be the `"formValue"` prop name
+* `dynamic` (boolean, optional, default: `true`) - whether this field accepts data bindings.
+	- Defaults to `false` for `boolean` and `color` types.
 
-### Special Props
+### Reserved Prop Names
 
 * `"enabled"` (boolean) - this will be displayed as a switch if present in a child component's props
 
