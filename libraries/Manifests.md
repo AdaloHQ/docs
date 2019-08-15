@@ -37,7 +37,7 @@ Prop Keys:
 	- `"color"` - A color string, of form `#ffffff` or `#rgba(255, 255, 255, 1)`
 	- `"date"` - An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string (ex: "2018-01-01T00:00:00.000Z")
 	- `"list"` - An array of dynamic data. See [Lists](#lists)
-	- `"action"`- An user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed.
+	- `"action"`- A user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed.
 
 * `control` (object, optional) - Customize the type of control presented to the user:
 	- `type` (string) - the type of control to use (see [Controls Reference](#controls-reference)
@@ -46,6 +46,8 @@ Prop Keys:
 	- `"listItem"` - This prop will be a list child. See [Lists](#lists)
 	- `"formValue"` - This prop is the `value` of a controlled input.
 	- `"formChangeHandler"` - This prop is the `onChange` of a controlled input. `type` should be `"action"`.
+	- `"controlledInput"` - Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue`.
+
 * `reference` (string, optional) - used in conjunction with `role` to reference a related prop.
 	- If role is `"listItem"` this should be a prop with `type: "list"`
 	- If role is `"formChangeHandler"` this should be the `"formValue"` prop name
