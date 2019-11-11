@@ -60,3 +60,8 @@ Then, to run the package locally, to make it accessible in Adalo, run:
 ```
 npx proton dev
 ```
+
+The first time you run this, you'll be asked to login using your Adalo account. This is in order to allow you to use the package in your account on Adalo.
+
+After you've successfully logged in and run `npx proton dev` again, you can go to Adalo and click the Add Layer button and you should see your package available at the bottom of the list of components.
+
