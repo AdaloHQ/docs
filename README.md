@@ -1,2 +1,2 @@
 # Adalo Docs
-Documentation for creating proton libraries
+Documentation for creating Adalo libraries
