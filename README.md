@@ -46,19 +46,19 @@ See the [Component Manifest Documentation](https://github.com/AdaloHQ/docs/blob/
 In order to test your package locally, you need to add a package dependency to your project:
 
 ```
-npm install --save @protonapp/proton-cli
+npm install --save @adalo/cli
 ```
 
 or:
 
 ```
-yarn add @protonapp/proton-cli
+yarn add @adalo/cli
 ```
 
 Then, to run the package locally, to make it accessible in Adalo, run:
 
 ```
-npx proton dev
+npx adalo dev
 ```
 
 The first time you run this, you'll be asked to login using your Adalo account. This is in order to allow you to use the package in your account on Adalo.
