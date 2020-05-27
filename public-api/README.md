@@ -1,5 +1,11 @@
 # Public API
 
+## Base URL
+
+```
+https://api.adalo.com
+```
+
 ## Authentication
 
 The public API is authenticated using authorization-bearer authentication. You can generate a token by emailing the Adalo team.
