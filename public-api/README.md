@@ -10,17 +10,18 @@ https://api.adalo.com
 
 The public API is authenticated using authorization-bearer authentication. You can generate a token by emailing the Adalo team.
 
-Send the following header:
+Send the following headers:
 
 ```
 Authorization: Bearer s7f98jo32jlseznml3n
+Content-Type: application/json
 ```
 
 ## Notifications
 
 The notifications API makes it possible to send push notifications (iOS & Android) to specific users, by ID, email, or username. In most cases, you will not have the user's ID (unless you’re receiving it from Zapier), so email or username are usually preferred.
 
-### `POST /notifications` - Trigger a notification
+### `POST https://api.adalo.com/notifications` - Trigger a notification
 
 Post Body (JSON):
 
