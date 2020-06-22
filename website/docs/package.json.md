@@ -27,7 +27,11 @@ In your `package.json` you will need to add an additional section called `"adalo
         "name": "Second Component",
         "manifest": "./src/SecondComponent/manifest.json"
       }
-    ]
+    ],
+    // OPTIONAL: Additional install scripts. You can add a script with any path to
+    // add steps to the ios or android build process
+    "iosInstallScript": "path/to/script/here",
+    "androidInstallScript": "path/to/script/here"
   }
 }
 ```
@@ -82,3 +86,17 @@ Relative path, from the `package.json`, to the `manifest.json` for your componen
   }
 }
 ```
+
+### `iosInstallScript`
+
+- Type: `String`
+
+Optional. Relative path to script that can add steps the ios build process,
+for example by installing additional dependencies, adding lines to the Podfile, etc.
+
+### `androidInstallScript`
+
+- Type: `String`
+
+Optional. Relative path to script that can add steps the android build process,
+for example by installing additional dependencies, adding options to gradle files, etc.
