@@ -23,5 +23,5 @@ yarn start
 ```
 
 :::note Note
-`npx` on the first line is not a type — it's a [package runner tool that comes with npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+`npx` on the first line is not a typo — it's a [package runner tool that comes with npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
 :::
