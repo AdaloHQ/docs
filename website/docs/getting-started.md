@@ -5,6 +5,8 @@ title: Getting Started
 
 Overview of the Adalo developers documentation and related resources.
 
+If videos are your thing, we have a [playlist of Component Development Tutorials](https://www.youtube.com/playlist?list=PLBUOs6aGzPnS_B3jisLbMMyjIcDB7dPaC)
+
 ## Library Standards
 
 Each Adalo Library should strive to solve one particular use case, and solve it well. Don’t be a jack of all trades. Be the master of one. [Read More](library-standards.md)
