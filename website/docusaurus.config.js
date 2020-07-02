@@ -28,7 +28,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "create-new-adalo-component",
+              to: "create-new-adalo-library",
             },
             {
               label: "Component Standards",

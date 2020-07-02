@@ -1,6 +1,6 @@
 ---
-id: create-new-adalo-component
-title: Create a New Adalo Component
+id: create-new-adalo-library
+title: Create a New Adalo Library
 ---
 
 `create-adalo-component` is a powerful quick start tool for creating new adalo components, and is the best way to start building a new component for Adalo.

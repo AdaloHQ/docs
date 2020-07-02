@@ -3,82 +3,94 @@ id: package.json
 title: package.json
 ---
 
-## Example
-
-In your `package.json` you will need to add an additional section called `"adalo"` that will look something like this:
-
-```json
-{
-  "name": "my-package",
-  "version": "0.0.1",
-  "dependencies": { ... },
-  "adalo": {
-    "displayName": "My Package",
-    "components": [
-      {
-        // "name" must match the exported name from your module.
-        // i.e. if you `import { FirstComponent } from 'my-package'` then you would put:
-        "name": "FirstCompnent",
-
-        // "manifest" is the relative path to the manifest.json file, relative to package.json
-        "manifest": "./src/FirstComponent/manifest.json"
-      },
-      {
-        "name": "Second Component",
-        "manifest": "./src/SecondComponent/manifest.json"
-      }
-    ]
-  }
-}
-```
+Your `package.json` is the source for information about your library. 
 
 ## Keys
 
-### `displayName`
+### `name`
+
+- Type: `String`
+- Format: [kebab-case](https://en.wiktionary.org/wiki/kebab_case)
+
+The name of your Adalo Library. This will be used for referencing your library and deploying to our registry.
+
+When choosing a name for your Library, choose a name that
+
+- is unique
+- is descriptive
+
+Additionally, when choosing a name for an unpublished library, also choose a name that
+
+-  is not already owned by someone else
+-  is not spelled in a smiliar way to another library name
+-  will not confuse others about authorship
+
+:::caution
+Once you have published your library you can **NOT** change your library name.
+:::
+
+### `description`
 
 - Type: `String`
 
-Name of your package
+The description of your Adalo Library. This will be used in the Marketplace Library Browser.
 
-```json
-{
-  "adalo": {
-    "displayName": "My Package"
-  }
-}
-```
+### `version`
 
-### `components`
+- Type: `String`
+
+The current version of your Adalo Library. We use `semver` for versioning at Adalo.
+
+For any changes to any of your Components `manifest.json`
+
+- Additions require a minor version upgrade: `1.0.0` => `1.1.0`
+- Removals or Heavy Modifications require a major version upgrade: `1.0.0` => `2.0.0`
+
+### `main`
+
+- Type: `String`
+- Format: Relative path to image
+- Allowed File Extensions: `.js`
+
+The main entry point for your Library.
+
+### `adalo`
+
+- Type: `Object`
+
+Information about your Library.
+
+#### `logo`
+
+- Type: `String`
+- Format: Relative path to image
+- Allowed File Extensions: `.png`
+
+This image will be used in the Component Marketplace Browser.
+
+#### `displayName`
+
+This will be the name display in the Component Marketplace Browser.
+
+#### `components`
 
 - Type: `Array`
 
-An array of objects containing a `name` and `manifest` key
-
-#### `name`
-
-- Type: `String`
-
-Name of your component
-
-:::note Note
-Your name should match the exported name from your module
-:::
-
-#### `manifest`
-
-- Type: `String`
-
-Relative path, from the `package.json`, to the `manifest.json` for your component
+## Example
 
 ```json
 {
+  "name": "example-library",
+  "description": "An example library description",
+  "version": "1.2.3",
+  "main": "index.js",
   "adalo": {
+    "displayName": "Example Library",
     "components": [
-      {
-        "name": "FirstComponent",
-        "manifest": "./src/FirstComponent/manifest.json"
-      }
-    ]
+      { name: 'ExampleComponent', manifest: './components/ExampleComponent/manifest.json' }
+    ],
+    "logo": "./logo.png"
   }
 }
 ```
+
