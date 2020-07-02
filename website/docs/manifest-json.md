@@ -1,6 +1,6 @@
 ---
-id: manifest
-title: Component Manifest
+id: manifest-json
+title: manifest.json
 ---
 
 A manifest file describes the properties that a particular component accepts, and which controls to display in the Adalo editor. Think of them like React PropTypes, but with types specific to Adalo. You should have one manifest file per component in your library.
@@ -66,8 +66,17 @@ List of child components. See Child Components
 ### `icon`
 
 - Type: `String`
+- Format: Relative path to image
+- Allowed File Extensions: `.png`
+- Dimensions:
+  - `min-height: 268px`
+  - `min-width: 312px`
 
-The path to the icon for this component
+The path to the icon for this component. This will be used as a thumbnail in the Components Panel.
+
+#### Example Icon
+
+![Example icon for a Libraries Component](/static/img/example-icon.png)
 
 ### `resizeX`
 

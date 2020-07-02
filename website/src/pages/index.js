@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import { Redirect } from '@docusaurus/router'
-import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Redirect } from "@docusaurus/router";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 function Home() {
-  return <Redirect to={useBaseUrl('/create-new-adalo-component')} />
+  return <Redirect to={useBaseUrl("/getting-started")} />;
 }
 
-export default Home
+export default Home;
