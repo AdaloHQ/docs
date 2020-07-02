@@ -3,9 +3,15 @@ id: getting-started
 title: Getting Started
 ---
 
-This page is an overview of the Adalo developers documentation and related resources.
+Overview of the Adalo developers documentation and related resources.
+
+## Library Standards
+
+Each Adalo Library should strive to solve one particular use case, and solve it well. Don’t be a jack of all trades. Be the master of one. [Read More](library-standards.md)
 
 ## Create a New Adalo Library
+
+`create-adalo-component` is a powerful and quick bootstrapping tool for creating new Adalo Libraries and is the recommended way to start building a new library for Adalo. [Read More](create-new-adalo-library.md)
 
 ## Something Missing?
 

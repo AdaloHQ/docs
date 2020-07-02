@@ -1,18 +1,42 @@
 ---
-id: cli
-title: CLI
+id: adalo-cli
+title: "@adalo/cli"
 ---
 
 ## Commands
 
-### Dev
+### `login`
 
-_coming soon_
+Login with Adalo to generate an `.adalorc` file for authentication with Adalo services.
 
-### Build
+```bash
+npx @adalo/cli login
+```
 
-_coming soon_
+### `dev`
 
-### Publish
+Start a local development server to test components on Adalo.
+
+```bash
+npx @adalo/cli dev
+```
+
+### `build`
+
+Generate a production ready build of your Library.
+
+```bash
+npx @adalo/cli build
+```
+
+### `publish`
+
+Publish your Library to Adalo.
+
+```bash
+npx @adalo/cli publish
+```
+
+## Arguments
 
 _coming soon_

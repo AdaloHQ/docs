@@ -1,5 +1,5 @@
 ---
-id: package.json
+id: package-json
 title: package.json
 ---
 
@@ -28,6 +28,10 @@ Additionally, when choosing a name for an unpublished library, also choose a nam
 :::caution
 Once you have published your library you can **NOT** change your library name.
 :::
+
+### `author`
+
+The author property is currently used to show who the Library was created by in the Marketplace Library Browser.
 
 ### `description`
 
@@ -65,8 +69,15 @@ Information about your Library.
 - Type: `String`
 - Format: Relative path to image
 - Allowed File Extensions: `.png`
+- Dimensions:
+  - `min-height: 90px`
+  - `min-width: 90px`
 
-This image will be used in the Component Marketplace Browser.
+This image will be used in the Component Marketplace Browser. Logos should be at least `90px x 90px`.
+
+##### Example Logo
+
+![Example logo for Libraries](/static/img/example-logo.png)
 
 #### `displayName`
 
@@ -82,6 +93,7 @@ This will be the name display in the Component Marketplace Browser.
 {
   "name": "example-library",
   "description": "An example library description",
+  "author": "Bob Smith",
   "version": "1.2.3",
   "main": "index.js",
   "adalo": {
