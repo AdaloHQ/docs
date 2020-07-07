@@ -1,11 +1,11 @@
 ---
-id: component-standards
-title: Component Standards
+id: library-standards
+title: Library Standards
 ---
 
 ## Single-Purpose
 
-Each Adalo component should strive to solve one particular use case, and solve it well. Don’t be a jack of all trades. Be the master of one.
+Each Adalo Library should strive to solve one particular use case, and solve it well. Don’t be a jack of all trades. Be the master of one.
 
 Examples:
 

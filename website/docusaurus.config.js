@@ -1,6 +1,6 @@
 module.exports = {
   title: "Adalo",
-  tagline: "CLI",
+  tagline: "Developer Documentation",
   url: "https://developers.adalo.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
@@ -10,7 +10,8 @@ module.exports = {
     navbar: {
       logo: {
         alt: "Adalo Logo",
-        src: "img/adalo-logo-large.png",
+        src: "img/adalo-logo-black.png",
+        srcDark: "img/adalo-logo-white.png",
       },
       links: [
         {
@@ -28,15 +29,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "create-new-adalo-component",
-            },
-            {
-              label: "Component Standards",
-              to: "component-standards",
-            },
-            {
-              label: "manifest.json",
-              to: "manifest",
+              to: "getting-started",
             },
           ],
         },
@@ -83,8 +76,8 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Adalo. Built with Docusaurus.`,
     },
     prism: {
-      theme: require("prism-react-renderer/themes/duotoneLight"),
-      darkTheme: require("prism-react-renderer/themes/duotoneDark"),
+      theme: require("prism-react-renderer/themes/github"),
+      darkTheme: require("prism-react-renderer/themes/palenight"),
       additionalLanguages: ["bash"],
     },
   },

@@ -1,8 +1,11 @@
 module.exports = {
-  someSidebar: {
-    Adalo: ['introduction', 'component-standards', 'contributing'],
-    ['Getting Started']: ['create-new-adalo-component', 'configuration'],
-    ['Examples']: ['example-conditional'],
-    ['API Reference']: ['cli', 'package.json', 'manifest'],
+  docs: {
+    ["Marketplace"]: [
+      "getting-started",
+      "library-standards",
+      "create-new-adalo-library",
+      "publish-new-adalo-library",
+    ],
+    ["API Reference"]: ["adalo-cli", "package-json", "manifest-json"],
   },
-}
+};
