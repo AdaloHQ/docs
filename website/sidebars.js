@@ -1,43 +1,39 @@
 module.exports = {
   docs: {
-    "Marketplace": [
-      "getting-started",
-      "library-standards",
-      "create-new-adalo-library",
+    Marketplace: [
+      "marketplace/getting-started",
+      "marketplace/library-standards",
+      "marketplace/create-new-adalo-library",
       {
-        "type": "category",
-        "label": "Testing",
-        "items": [
-          "web-testing",
-          "mobile-dev-toolkit"
-        ]
+        type: "category",
+        label: "Testing",
+        items: ["marketplace/web-testing", "marketplace/mobile-dev-toolkit"],
       },
-      "publish-new-adalo-library",
+      "marketplace/publish-new-adalo-library",
       {
-        "type": "category",
-        "label": "Examples",
-        "items": [
-          "examples/example-access-child-props",
-          "examples/example-conditional",
-          "examples/example-adalo-colors",
-          "examples/example-enabled",
-          "examples/example-adalo-actions",
-          "examples/example-action-arguments",
-          "examples/example-menu",
-          "examples/example-slider",
-        ]
-      }
+        type: "category",
+        label: "Examples",
+        items: [
+          "marketplace/examples/example-access-child-props",
+          "marketplace/examples/example-conditional",
+          "marketplace/examples/example-app-branding",
+          "marketplace/examples/example-enabled",
+          "marketplace/examples/example-adalo-actions",
+          "marketplace/examples/example-menu",
+          "marketplace/examples/example-slider",
+        ],
+      },
     ],
     "API Reference": [
       {
-        "type": "category",
-        "label": "Marketplace",
-        "items": [
-          "adalo-cli",
-          "package-json",
-          "manifest-json"
-        ]
-      }
+        type: "category",
+        label: "Marketplace",
+        items: [
+          "marketplace/adalo-cli",
+          "marketplace/package-json",
+          "marketplace/manifest-json",
+        ],
+      },
     ],
   },
 };

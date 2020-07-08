@@ -1,6 +1,6 @@
 ---
-id: example-adalo-colors
-title: Adalo Colors
+id: example-app-branding
+title: App Branding
 ---
 
 ```json

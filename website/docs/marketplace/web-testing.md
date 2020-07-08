@@ -2,10 +2,10 @@
 id: web-testing
 title: "Testing on Web"
 ---
-## Testing on Web
 
 Once you've created an Adalo component with `npx create-adalo-component`, you can immediately test your component on web.
 To do so, run in your shell:
+
 ```bash
 # login with your adalo credentials
 npx adalo login

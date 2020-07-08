@@ -30,5 +30,7 @@ Example manifest:
 To access the prop `exampleProp`, you access it as a child prop to `childComponent`:
 
 ```javascript
-const { childComponent: exampleProp } = this.props; // Same as doing this.props.childComponent.exampleProp
+const {
+  childComponent: { exampleProp },
+} = this.props; // Same as doing this.props.childComponent.exampleProp
 ```

@@ -17,11 +17,14 @@ Your `package.json` is the source for information about your library.
   "adalo": {
     "displayName": "Example Library",
     "components": [
-      { name: 'ExampleComponent', manifest: './components/ExampleComponent/manifest.json' }
+      {
+        "name": "ExampleComponent",
+        "manifest": "./components/ExampleComponent/manifest.json"
+      }
     ],
     "logo": "./logo.png",
-    "iosInstallScript": "path/to/script/here",
-    "androidInstallScript": "path/to/script/here"
+    "iosInstallScript": "./relativePath/to/script/here",
+    "androidInstallScript": "./relativePath/to/script/here"
   }
 }
 ```
@@ -42,9 +45,9 @@ When choosing a name for your Library, choose a name that
 
 Additionally, when choosing a name for an unpublished library, also choose a name that
 
--  is not already owned by someone else
--  is not spelled in a smiliar way to another library name
--  will not confuse others about authorship
+- is not already owned by someone else
+- is not spelled in a smiliar way to another library name
+- will not confuse others about authorship
 
 :::caution
 Once you have published your library you can **NOT** change your library name.
@@ -116,6 +119,7 @@ List of individual components in your library. Components in this list have the 
   "manifest": "./src/components/ComponentName/manifest.json"
 }
 ```
+
 Names of components should follow the naming convention of React components, with
 mixed case and each internal word capitalized.
 
