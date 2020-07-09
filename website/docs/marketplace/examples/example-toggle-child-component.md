@@ -1,6 +1,6 @@
 ---
-id: example-enabled
-title: Enable Child Component
+id: example-toggle-child-component
+title: Toggle Child Component
 ---
 
 ```json

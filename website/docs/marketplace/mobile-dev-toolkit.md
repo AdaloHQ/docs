@@ -84,4 +84,4 @@ After completing those steps, you should be good to go!
 If you modify any code in your library, your changes **will not** be automatically reflected in the code. In order to refresh `mobile-previewer`, you must reinstall the dependencies using `yarn --force`.
 Alternatively, you can use [wml](https://github.com/wix/wml), a tool that uses watchman to make concrete symlinks. If you use wml, changes will be automatically reflected and hot-reloaded. This saves a lot of time.
 
-If your component requires custom configuration, you can instruct the Adalo build system to make these changes using install scripts. See the [component developer docs](https://developers.adalo.com/package-json) or the [tutorial video](https://youtu.be/6VAdoYKaNgc) to learn how.
+If your component requires custom configuration, you can instruct the Adalo build system to make these changes using install scripts. See the [component developer docs](marketplace/getting-started.md) or the [tutorial video](https://youtu.be/6VAdoYKaNgc) to learn how.

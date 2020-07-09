@@ -1,6 +1,6 @@
 ---
-id: example-adalo-actions
-title: Adalo Actions
+id: example-actions
+title: Actions
 ---
 
 Say you allow the creator to specify additional actions when a button in your component is clicked:
