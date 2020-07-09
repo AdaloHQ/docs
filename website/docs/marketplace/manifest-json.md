@@ -76,7 +76,7 @@ The path to the icon for this component. This will be used as a thumbnail in the
 
 #### Example Icon
 
-![Example icon for a Libraries Component](/static/img/example-icon.png)
+![Example icon for a Libraries Component](/img/example-icon.png)
 
 ### `resizeX`
 
@@ -445,6 +445,6 @@ Each argument needs two options: displayName and type. Type refers to the [Adalo
 When you call the action in your code, you just have to call the action with the intended arguments:
 
 ```javascript
-const { testAction } = this.props
-testAction(arg1, arg2)
+const { testAction } = this.props;
+testAction(arg1, arg2);
 ```

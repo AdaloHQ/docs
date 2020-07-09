@@ -101,7 +101,7 @@ This image will be used in the Component Marketplace Browser. Logos should be at
 
 ##### Example Logo
 
-![Example logo for Libraries](/static/img/example-logo.png)
+![Example logo for Libraries](/img/example-logo.png)
 
 #### `displayName`
 
