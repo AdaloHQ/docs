@@ -29,7 +29,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "getting-started",
+              to: "marketplace/getting-started",
             },
           ],
         },

@@ -3,7 +3,31 @@ id: package-json
 title: package.json
 ---
 
-Your `package.json` is the source for information about your library. 
+Your `package.json` is the source for information about your library.
+
+## Example
+
+```json
+{
+  "name": "example-library",
+  "description": "An example library description",
+  "author": "Bob Smith",
+  "version": "1.2.3",
+  "main": "index.js",
+  "adalo": {
+    "displayName": "Example Library",
+    "components": [
+      {
+        "name": "ExampleComponent",
+        "manifest": "./components/ExampleComponent/manifest.json"
+      }
+    ],
+    "logo": "./logo.png",
+    "iosInstallScript": "./relativePath/to/script/here",
+    "androidInstallScript": "./relativePath/to/script/here"
+  }
+}
+```
 
 ## Keys
 
@@ -21,9 +45,9 @@ When choosing a name for your Library, choose a name that
 
 Additionally, when choosing a name for an unpublished library, also choose a name that
 
--  is not already owned by someone else
--  is not spelled in a smiliar way to another library name
--  will not confuse others about authorship
+- is not already owned by someone else
+- is not spelled in a smiliar way to another library name
+- will not confuse others about authorship
 
 :::caution
 Once you have published your library you can **NOT** change your library name.
@@ -87,22 +111,28 @@ This will be the name display in the Component Marketplace Browser.
 
 - Type: `Array`
 
-## Example
+List of individual components in your library. Components in this list have the format:
 
 ```json
 {
-  "name": "example-library",
-  "description": "An example library description",
-  "author": "Bob Smith",
-  "version": "1.2.3",
-  "main": "index.js",
-  "adalo": {
-    "displayName": "Example Library",
-    "components": [
-      { name: 'ExampleComponent', manifest: './components/ExampleComponent/manifest.json' }
-    ],
-    "logo": "./logo.png"
-  }
+  "name": "ComponentName",
+  "manifest": "./src/components/ComponentName/manifest.json"
 }
 ```
 
+Names of components should follow the naming convention of React components, with
+mixed case and each internal word capitalized.
+
+#### `iosInstallScript`
+
+- Type: `String`
+
+Optional. Relative path to script that can add steps the ios build process,
+for example by installing additional dependencies, adding lines to the Podfile, etc.
+
+#### `androidInstallScript`
+
+- Type: `String`
+
+Optional. Relative path to script that can add steps the android build process,
+for example by installing additional dependencies, adding options to gradle files, etc.
