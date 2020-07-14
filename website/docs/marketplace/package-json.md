@@ -24,7 +24,8 @@ Your `package.json` is the source for information about your library.
     ],
     "logo": "./logo.png",
     "iosInstallScript": "./relativePath/to/script/here",
-    "androidInstallScript": "./relativePath/to/script/here"
+    "androidInstallScript": "./relativePath/to/script/here",
+    "webpackConfig": "./relative/path/to/config"
   }
 }
 ```
@@ -136,3 +137,14 @@ for example by installing additional dependencies, adding lines to the Podfile, 
 
 Optional. Relative path to script that can add steps the android build process,
 for example by installing additional dependencies, adding options to gradle files, etc.
+
+#### `webpackConfig`
+
+- Type: `String`
+
+Optional. Relative path to a custom webpack config file. If you don't specify one,
+we will use our own. 
+
+:::important
+Make sure to make your config the only export of the webpack config file.
+:::
