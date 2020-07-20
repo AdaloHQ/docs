@@ -25,6 +25,8 @@ module.exports = {
           "marketplace/examples/example-menu",
           "marketplace/examples/example-slider",
           "marketplace/examples/example-custom-webpack",
+          "marketplace/examples/example-force-rerender",
+          "marketplace/examples/example-editor-prop",
         ],
       },
     ],
