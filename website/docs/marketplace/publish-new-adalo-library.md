@@ -18,4 +18,4 @@ Must have
  - "version" property
  - "adalo" unique property
 
-See [package.json](package-json.md) for more information on these properties.
+See [package.json](marketplace/package-json.md) for more information on these properties.

@@ -25,3 +25,5 @@ title: Conditional Control
   }
 }
 ```
+
+`dependentOfParent` will only appear in the editor if `parentProp` is set to true.
