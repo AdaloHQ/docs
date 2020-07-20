@@ -7,7 +7,10 @@ module.exports = {
       {
         type: "category",
         label: "Testing",
-        items: ["marketplace/web-testing", "marketplace/mobile-dev-toolkit"],
+        items: [
+          "marketplace/testing/web-testing",
+          "marketplace/testing/mobile-dev-toolkit",
+        ],
       },
       "marketplace/publish-new-adalo-library",
       {
@@ -30,9 +33,9 @@ module.exports = {
         type: "category",
         label: "Marketplace",
         items: [
-          "marketplace/adalo-cli",
-          "marketplace/package-json",
-          "marketplace/manifest-json",
+          "api-reference/marketplace/adalo-cli",
+          "api-reference/marketplace/package-json",
+          "api-reference/marketplace/manifest-json",
         ],
       },
     ],
