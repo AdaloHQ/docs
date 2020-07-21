@@ -85,3 +85,17 @@ If you modify any code in your library, your changes **will not** be automatical
 Alternatively, you can use [wml](https://github.com/wix/wml), a tool that uses watchman to make concrete symlinks. If you use wml, changes will be automatically reflected and hot-reloaded. This saves a lot of time.
 
 If your component requires custom configuration, you can instruct the Adalo build system to make these changes using install scripts. See the [component developer docs](marketplace/getting-started.md) or the [tutorial video](https://youtu.be/6VAdoYKaNgc) to learn how.
+
+### Troubleshooting
+
+This section will organically grow over time as developers run into more build issues...
+#### Common build issues and how to fix them (Android):
+- If you run into an error that looks like: `java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7`
+  - Update gradle. To do so, open `mobile-previewer/android/gradle/wrapper/gradle-wrapper.properties`. Change `distributionUrl` to be: `distributionUrl=https\://services.gradle.org/distributions/gradle-6.3-all.zip`.
+- If you run into an error that looks like "Missing SDK path".
+  - Add a new file `mobile-previewer/android/local.properties`, which will only have one line: `sdk.dir=/path/to/android/sdk/locally`. On mac, this path will look like `/Users/username/Library/Android/sdk`, where `username` is your username. 
+#### Common build issues and how to fix them (iOS):
+- `pod install` fails on line `use_native_modules!`
+  - Make sure Node is properly installed. Run `node -v`. If this fails, download and run the node js installer from their website.
+- `pod install` fails with an error that looks like "SDK "iphoneos" cannot be located"
+  - You likely installed XCode's command line tools separately before installing XCode's editor. See [this](https://www.ryadel.com/en/xcode-sdk-iphoneos-cannot-be-located-mac-osx-error-fix/) post for more details.
