@@ -90,9 +90,9 @@ If your component requires custom configuration, you can instruct the Adalo buil
 
 This section will organically grow over time as developers run into more build issues...
 #### Common build issues and how to fix them (Android):
-- I've run into an error that looks like: `java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7`
+- If you run into an error that looks like: `java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7`
   - Update gradle. To do so, open `mobile-previewer/android/gradle/wrapper/gradle-wrapper.properties`. Change `distributionUrl` to be: `distributionUrl=https\://services.gradle.org/distributions/gradle-6.3-all.zip`.
-- I've run into an error that looks like "Missing SDK path".
+- If you run into an error that looks like "Missing SDK path".
   - Add a new file `mobile-previewer/android/local.properties`, which will only have one line: `sdk.dir=/path/to/android/sdk/locally`. On mac, this path will look like `/Users/username/Library/Android/sdk`, where `username` is your username. 
 #### Common build issues and how to fix them (iOS):
 - `pod install` fails on line `use_native_modules!`
