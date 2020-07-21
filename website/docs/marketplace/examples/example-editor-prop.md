@@ -8,7 +8,7 @@ you're looking at it in preview. In these cases, it is still important to render
 the editor. Every component is passed an `editor` prop, a flag that returns true when the component
 is rendered in the editor. You can use this prop to conditionally render something:
 
-```javascript
+```jsx
 export default class AdaloComponent extends Component {
   render() {
     const { editor } = this.props
