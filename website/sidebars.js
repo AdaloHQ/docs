@@ -27,6 +27,7 @@ module.exports = {
           "marketplace/examples/example-custom-webpack",
           "marketplace/examples/example-force-rerender",
           "marketplace/examples/example-editor-prop",
+          "marketplace/examples/example-role-list",
         ],
       },
     ],
