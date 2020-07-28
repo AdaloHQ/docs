@@ -21,6 +21,6 @@ jobs:
       - run: yarn run deploy
         working-directory: website
         env:
-          GIT_USER: git
+          GIT_USER: github.actor
 
 
