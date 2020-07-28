@@ -34,5 +34,8 @@ jobs:
           git config --global user.name "gh-actions"
       - run: yarn run deploy
         working-directory: website
+        env:
+          GIT_USER: git
+          USE_SSH: true
 
 
