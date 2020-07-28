@@ -2,7 +2,15 @@ module.exports = {
   docs: {
     Marketplace: [
       "marketplace/getting-started",
-      "marketplace/library-standards",
+      {
+        type: "category",
+        label: "Library Requirements",
+        items: [
+          "marketplace/requirements/philosophy",
+          "marketplace/requirements/logo-guidelines",
+          "marketplace/requirements/thumbnail-guidelines",
+        ],
+      },
       "marketplace/create-new-adalo-library",
       {
         type: "category",
