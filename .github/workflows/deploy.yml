@@ -15,7 +15,10 @@ jobs:
         with:
           node-version: 13
       - run: yarn install --frozen-lockfile
+        working-directory: website
       - run: yarn run build
+        working-directory: website
       - run: GIT_USER=zachbharris yarn run deploy
+        working-directory: website
 
 
