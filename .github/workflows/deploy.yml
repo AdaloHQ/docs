@@ -16,11 +16,10 @@ jobs:
           node-version: 13
       - run: yarn install --frozen-lockfile
         working-directory: website
-      - run: yarn run build
-        working-directory: website
+      - uses: oleksiyrudenko/gha-git-credentials@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
       - run: yarn run deploy
         working-directory: website
-        env:
-          GIT_USER: github.actor
 
 
