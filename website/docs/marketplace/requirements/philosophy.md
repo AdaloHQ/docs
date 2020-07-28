@@ -1,6 +1,6 @@
 ---
-id: library-standards
-title: Library Standards
+id: philosophy
+title: Standards
 ---
 
 ## Single-Purpose
