@@ -3,8 +3,6 @@ id: getting-started
 title: Getting Started
 ---
 
-## Create a New Adalo Component Library
-
 You'll need to have [Node](https://nodejs.org) `>=10.2` on your machine, and you need to [enable developer mode](enabling-developer-mode) on your Adalo account. Then to create a component, run:
 
 ```bash
