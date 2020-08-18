@@ -3,7 +3,7 @@ id: getting-started
 title: Getting Started
 ---
 
-You'll need to have [Node](https://nodejs.org) `>=10.2` on your machine, and you need to [enable developer mode](enabling-developer-mode) on your Adalo account. Then to create a component, run:
+You'll need to have [Node](https://nodejs.org) `>=10.2` on your machine, and you need to [enable developer mode](marketplace/enabling-developer-mode.md) on your Adalo account. Then to create a component, run:
 
 ```bash
 npx create-adalo-component my-component
