@@ -1,0 +1,4 @@
+---
+id: resizing
+title: Resizing
+---

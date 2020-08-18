@@ -13,7 +13,22 @@ module.exports = {
         src: "img/adalo-logo-black.png",
         srcDark: "img/adalo-logo-white.png",
       },
-      links: [
+      items: [
+        {
+          to: "docs/basics/introduction",
+          label: "Docs",
+          position: "left",
+        },
+        {
+          to: "api-reference/configuration/package-json",
+          label: "API Reference",
+          position: "left",
+        },
+        {
+          to: "guidelines/component-standards",
+          label: "Library Guidelines",
+          position: "left",
+        },
         {
           href: "https://github.com/AdaloHQ",
           label: "GitHub",
