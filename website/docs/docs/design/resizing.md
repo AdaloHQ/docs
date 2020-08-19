@@ -8,6 +8,10 @@ Some of the base-level props in the [component manifest](api-reference/configura
 - `defaultWidth` and `defaultHeight` set the default sizing when the app creator drags the component into their app.
 - `resizeX` and `resizeY` set the ability for the app creator to resize the component in the x and y directions, respectively. `resizeX` defaults to true, and `resizeY` defaults to false.
 
+:::note
+The following is only required if your component should dynamically change width based on screen size. For example, the slider component does this.
+:::
+
 When the app creator resizes your component to within 50 pixels of either border, the component should dynamically resize to the width of the screen. Making this work in your code isn't hard, but it does require a few extra steps:
 
 - Add a `width` to the component's state, and set it to `null` by default.

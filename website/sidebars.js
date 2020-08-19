@@ -38,4 +38,14 @@ module.exports = {
       "api-reference/configuration/manifest-json",
     ],
   },
+  "Library Guidelines": {
+    "Core Standards": [
+      "guidelines/core-standards/philosophy",
+      "guidelines/core-standards/ux-design",
+    ],
+    Design: [
+      "guidelines/design/logo-guidelines",
+      "guidelines/design/thumbnail-guidelines",
+    ],
+  },
 };

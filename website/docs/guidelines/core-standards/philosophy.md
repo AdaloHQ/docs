@@ -1,7 +1,9 @@
 ---
 id: philosophy
-title: Standards
+title: Philosophy
 ---
+
+At its core, every single component must follow these three main design principles by being: Single-Purpose, Cross-Platform, and Configurable.
 
 ## Single-Purpose
 
@@ -9,15 +11,15 @@ Each Adalo Library should strive to solve one particular use case, and solve it 
 
 Examples:
 
-- ✅ A video player component  
+- ✅ A video player component
 - ❌ A component that plays video or audio files
 
 ## Cross-Platform
 
-Adalo components are built in React Native, and that means it’s easy to build for iOS, Android, and Web! Adalo’s users expect components to work consistently across all three platforms, and as developers, we should strive to honor this. 
+Adalo components are built in React Native, and that means it’s easy to build for iOS, Android, and Web! Adalo’s users expect components to work consistently across all three platforms, and as developers, we should strive to honor this.
 
-- Some behaviors and styles can be platform specific if those are behaviors that are native to those platforms. 
-- The same functionality support should exist across all three platforms. 
+- Some behaviors and styles can be platform specific if those are behaviors that are native to those platforms.
+- The same functionality support should exist across all three platforms.
 - It is your responsibility to test components on all three platforms and ensure they work properly. We will test this during the review process.
 
 Examples:
@@ -51,4 +53,3 @@ Examples:
 
 - ✅ A calendar component that lets users specify a language and first day of the week
 - ❌ An english calendar that starts on Sundays
-

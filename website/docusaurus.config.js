@@ -25,7 +25,7 @@ module.exports = {
           position: "left",
         },
         {
-          to: "guidelines/component-standards",
+          to: "guidelines/core-standards/philosophy",
           label: "Library Guidelines",
           position: "left",
         },
@@ -44,7 +44,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "marketplace/getting-started",
+              to: "/docs/basics/introduction",
             },
           ],
         },
