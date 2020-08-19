@@ -27,6 +27,7 @@ module.exports = {
       "docs/interactions/standards",
       "docs/interactions/component-rendering",
       "docs/interactions/actions",
+      "docs/interactions/child-components",
       "docs/interactions/control-types",
       "docs/interactions/conditional-control",
     ],

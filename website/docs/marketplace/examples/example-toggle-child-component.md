@@ -23,4 +23,4 @@ title: Toggle Child Component
 ```
 
 The `enabled` option will add a switch right next to the accordion which can turn on and off the child component.
-See Adalo's "App Bar" for an example of what this looks like.x
+See Adalo's "App Bar" for an example of what this looks like.

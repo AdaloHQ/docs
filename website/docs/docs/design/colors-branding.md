@@ -22,9 +22,13 @@ One of the prop types you can declare in your manifest.json is `color`. To your 
 
 ```
 
+The color prop looks like this in the editor:
+
+<img src="/img/colors.gif" alt='Colors Example' />
+
 ### Branding List
 
-The default color will be whatever the creator has set to be their "primary" color. All of the options are:
+In the colors prop, you can set the default value to any app branding prop. All of the options are:
 
 - @primary
 - @primaryDark
