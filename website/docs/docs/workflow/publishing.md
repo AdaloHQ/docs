@@ -19,4 +19,4 @@ Must have
 - "version" property
 - "adalo" unique property
 
-See [package.json](api-reference/configuration/package-json) for more information on these properties.
+See [package.json](/api-reference/configuration/package-json) for more information on these properties.

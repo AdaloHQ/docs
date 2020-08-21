@@ -16,6 +16,7 @@ module.exports = {
       "docs/workflow/webpack",
       "docs/workflow/install-scripts",
       "docs/workflow/publishing",
+      "docs/workflow/backwards-compatibility",
     ],
     Design: [
       "docs/design/design-requirements",

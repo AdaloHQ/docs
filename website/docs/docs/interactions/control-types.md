@@ -66,28 +66,6 @@ Which will look like this in the editor:
 
 <img src="/img/menu.gif" alt='Menu Example' />
 
-### Dynamic Text
-
-In order to disable dynamic text (magic text) in the editor, you can add a control type of `text` like so:
-
-```json
-{
-  ...
-  "props": [
-    {
-      "name": "textProp",
-      "displayName": "Text Prop",
-      "type": "text",
-      "default": "Text",
-      "control" {
-        "type": "text",
-        "dynamic": "false"
-      }
-    }
-  ]
-}
-```
-
 ## Working with Adalo Lists (Role and Reference)
 
 One data type a prop can be is a list, and often you want other props to be able to reference the current list item. In order to do this, you must add two properties to that individual Adalo prop: `role` and `reference`. See the example below:

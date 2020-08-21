@@ -29,7 +29,7 @@ These docs assume you understand Javascript fundamentals and the [EMCAScript 201
 
 ### Standards
 
-In order to have your library accepted into the marketplace, you must make sure your component abides by our [standards](/guidelines/component-standards). Most importantly, make sure that your component is:
+In order to have your library accepted into the marketplace, you must make sure your component abides by our [standards](/guidelines/core-standards/component-standards). Most importantly, make sure that your component is:
 
 - Single-purpose. Each component should be designed to solve one specific use case.
 - Cross-platform. Each component should be compatible across web, iOS, and Android.

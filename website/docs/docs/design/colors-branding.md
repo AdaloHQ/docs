@@ -43,7 +43,7 @@ In the colors prop, you can set the default value to any app branding prop. All 
 
 You can also use the code `@contrast` to designate a contrast with a different color. Example:
 
-```json
+```json {5,14}
 {
   ...
   "props": [

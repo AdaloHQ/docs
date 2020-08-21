@@ -9,7 +9,7 @@ This tutorial will be a short overview of each part of the Adalo component devel
 
 The best way to create an Adalo library is by using the `create-adalo-component` tool. It generates an npm package with all the necessary dependencies, scripts, and basic starter code for a component.
 
-To run the tool, make sure you have [Node](https://nodejs.org) `>=10.2` installed and that you've [enabled developer mode](enable-dev-mode). Then, run:
+To run the tool, make sure you have [Node](https://nodejs.org) `>=10.2` installed and that you've [enabled developer mode](/docs/basics/enabling-dev-mode). Then, run:
 
 ```bash
 npx create-adalo-component my-component
@@ -22,7 +22,7 @@ npx adalo login
 npx adalo dev
 ```
 
-You can find more information in the [Creating a Component](create-adalo-component) docs.
+You can find more information in the [Creating a Component](/docs/basics/create-adalo-component) docs.
 
 ### Editing your library
 
