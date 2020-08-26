@@ -1,54 +1,52 @@
 module.exports = {
   docs: {
-    Marketplace: [
-      "marketplace/getting-started",
-      {
-        type: "category",
-        label: "Library Requirements",
-        items: [
-          "marketplace/requirements/philosophy",
-          "marketplace/requirements/logo-guidelines",
-          "marketplace/requirements/thumbnail-guidelines",
-        ],
-      },
-      "marketplace/create-new-adalo-library",
-      {
-        type: "category",
-        label: "Testing",
-        items: [
-          "marketplace/testing/web-testing",
-          "marketplace/testing/mobile-dev-toolkit",
-        ],
-      },
-      "marketplace/publish-new-adalo-library",
-      {
-        type: "category",
-        label: "Examples",
-        items: [
-          "marketplace/examples/example-access-child-props",
-          "marketplace/examples/example-conditional",
-          "marketplace/examples/example-app-branding",
-          "marketplace/examples/example-toggle-child-component",
-          "marketplace/examples/example-actions",
-          "marketplace/examples/example-menu",
-          "marketplace/examples/example-slider",
-          "marketplace/examples/example-custom-webpack",
-          "marketplace/examples/example-force-rerender",
-          "marketplace/examples/example-editor-prop",
-          "marketplace/examples/example-role-list",
-        ],
-      },
+    "The Basics": [
+      "docs/basics/introduction",
+      "docs/basics/tutorial",
+      "docs/basics/enabling-dev-mode",
+      "docs/basics/create-adalo-component",
+      "docs/basics/library-config",
+      "docs/basics/component-config",
+      "docs/basics/testing",
+      "docs/basics/publishing",
     ],
-    "API Reference": [
-      {
-        type: "category",
-        label: "Marketplace",
-        items: [
-          "api-reference/marketplace/adalo-cli",
-          "api-reference/marketplace/package-json",
-          "api-reference/marketplace/manifest-json",
-        ],
-      },
+    Workflow: [
+      "docs/workflow/cross-platform",
+      "docs/workflow/testing",
+      "docs/workflow/webpack",
+      "docs/workflow/install-scripts",
+      "docs/workflow/publishing",
+      "docs/workflow/backwards-compatibility",
+    ],
+    Design: [
+      "docs/design/design-requirements",
+      "docs/design/colors-branding",
+      "docs/design/resizing",
+      "docs/design/images",
+    ],
+    Interactions: [
+      "docs/interactions/standards",
+      "docs/interactions/component-rendering",
+      "docs/interactions/actions",
+      "docs/interactions/child-components",
+      "docs/interactions/control-types",
+      "docs/interactions/conditional-control",
+    ],
+  },
+  "API Reference": {
+    Configuration: [
+      "api-reference/configuration/package-json",
+      "api-reference/configuration/manifest-json",
+    ],
+  },
+  "Library Guidelines": {
+    "Core Standards": [
+      "guidelines/core-standards/philosophy",
+      "guidelines/core-standards/ux-design",
+    ],
+    Design: [
+      "guidelines/design/logo-guidelines",
+      "guidelines/design/thumbnail-guidelines",
     ],
   },
 };

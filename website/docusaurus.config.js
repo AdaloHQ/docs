@@ -13,7 +13,22 @@ module.exports = {
         src: "img/adalo-logo-black.png",
         srcDark: "img/adalo-logo-white.png",
       },
-      links: [
+      items: [
+        {
+          to: "docs/basics/introduction",
+          label: "Docs",
+          position: "left",
+        },
+        {
+          to: "api-reference/configuration/package-json",
+          label: "API Reference",
+          position: "left",
+        },
+        {
+          to: "guidelines/core-standards/philosophy",
+          label: "Library Guidelines",
+          position: "left",
+        },
         {
           href: "https://github.com/AdaloHQ",
           label: "GitHub",
@@ -29,7 +44,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "marketplace/getting-started",
+              to: "/docs/basics/introduction",
             },
           ],
         },
@@ -80,6 +95,10 @@ module.exports = {
       darkTheme: require("prism-react-renderer/themes/palenight"),
       additionalLanguages: ["bash"],
     },
+    algolia: {
+      apiKey: "a860826021c803eb14aa9a09faf56062",
+      indexName: "prod_ADALO_DEVELOPER_DOCS",
+    },
   },
   presets: [
     [
@@ -88,6 +107,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "",
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
