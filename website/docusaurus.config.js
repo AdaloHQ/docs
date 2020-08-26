@@ -95,10 +95,6 @@ module.exports = {
       darkTheme: require("prism-react-renderer/themes/palenight"),
       additionalLanguages: ["bash"],
     },
-    algolia: {
-      apiKey: "a860826021c803eb14aa9a09faf56062",
-      indexName: "prod_ADALO_DEVELOPER_DOCS",
-    },
   },
   presets: [
     [
