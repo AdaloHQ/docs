@@ -9,7 +9,7 @@ It sets up your base environment for building custom components for adalo by ins
 
 ## Creating a new library
 
-You'll need to have [Node](https://nodejs.org) `>=10.2` on your machine, and you need to [enable developer mode](/docs/basics/enabling-developer-mode) on your Adalo account. Then to create a component, run:
+You'll need to have [Node](https://nodejs.org) `>=10.2` on your machine, and you need to [enable developer mode](/docs/basics/enabling-dev-mode) on your Adalo account. Then to create a component, run:
 
 ```bash
 npx create-adalo-component my-component
