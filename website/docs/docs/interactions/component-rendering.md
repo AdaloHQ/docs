@@ -7,7 +7,7 @@ Listed below are a few tips and tricks having to do with component rendering.
 
 ## Platform-Based Rendering
 
-Sometimes, you want to load different versions of a file depending on what platform the user is on. React Native makes this incredibly easy: all you have to do is add an extra extension. For example, if you wanted to make a version of `index.js` specifically for web, all you have to do is make a new file with the name `index.web.js`. The original `index.js` will act as the default, and `index.web.js` will automatically be used on web. See ["Making Your Component Work Across All Platforms"](/docs/workflow/cross-platform) for more details.
+Sometimes, you want to load different versions of a file depending on what platform the user is on. React Native makes this incredibly easy: all you have to do is add an extra extension. For example, if you wanted to make a version of `index.js` specifically for web, all you have to do is make a new file with the name `index.web.js`. The original `index.js` will act as the default, and `index.web.js` will automatically be used on web. See ["Cross-Platform Compatibility"](/docs/workflow/cross-platform) for more details.
 
 ## Render Something Different in the Editor
 

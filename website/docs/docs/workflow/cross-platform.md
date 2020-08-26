@@ -1,6 +1,6 @@
 ---
 id: cross-platform
-title: Making Your Component Work Across All Platforms
+title: Cross-Platform Compatibility
 ---
 
 As the [library standards](/guidelines/core-standards/component-standards) emphasize, it is **critical** that your component works across all platforms. Some technical points to help with this:
