@@ -23,6 +23,7 @@ module.exports = {
       "docs/design/colors-branding",
       "docs/design/resizing",
       "docs/design/images",
+      "docs/design/icons",
     ],
     Interactions: [
       "docs/interactions/standards",
