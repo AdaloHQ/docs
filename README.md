@@ -38,7 +38,7 @@ In `package.json` you need to add an additional section called `"adalo"` that wi
 
 `manifest.json` is a file that must accompany every exported component. You define which props will be available in the UI when using your component in Adalo.
 
-See the [Component Manifest Documentation](https://github.com/AdaloHQ/docs/blob/master/libraries/Manifests.md) to learn what to put inside your manifest.json file.
+See the [Component Manifest Documentation](https://github.com/AdaloHQ/docs/blob/main/libraries/Manifests.md) to learn what to put inside your manifest.json file.
 
 
 ## Testing Locally
