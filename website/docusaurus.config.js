@@ -25,11 +25,6 @@ module.exports = {
           position: "left",
         },
         {
-          to: "guidelines/core-standards/philosophy",
-          label: "Library Guidelines",
-          position: "left",
-        },
-        {
           href: "https://github.com/AdaloHQ",
           label: "GitHub",
           position: "right",
