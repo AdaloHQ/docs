@@ -10,4 +10,4 @@ Each library and component must follow some design rules in order to be approved
 - Manifest colors should default to App Branding colors whenever possible. See the [colors reference](colors-branding) for more information.
 - Component sizing should be dynamic to the device size. See [resizing](resizing) for more information.
 
-There are a variety of UX design requirements too. See the [UX design requirements](/dev/standards/manifest) for more information.
+There are a variety of UX design requirements too. See the [UX design requirements](/docs/standards/manifest) for more information.
