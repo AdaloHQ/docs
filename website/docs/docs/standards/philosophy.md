@@ -3,9 +3,22 @@ id: philosophy
 title: Philosophy
 ---
 
-At its core, every single component must follow these three main design principles by being: Single-Purpose, Cross-Platform, and Configurable.
+When brainstorming a new component to create, make sure that your idea falls within Adalo's definition of a component and that it follows the core design principles.
 
-## Single-Purpose
+## What is a component? (And what is not)
+
+A component is a functional unit within Adalo. They are capable of executing their own logic based on properties given to it by the app, as outlined by the component.
+
+Components must:
+
+- Have a visual element
+- In the vast majority of use cases, have some way for the user to interact with the component.
+
+## Design Principles
+
+At its core, every single component must follow these four main design principles by being: Single-Purpose, Cross-Platform, Configurable, and Universal.
+
+### Single-Purpose
 
 Each Adalo Library should strive to solve one particular use case, and solve it well. Don’t be a jack of all trades. Be the master of one.
 
@@ -14,7 +27,7 @@ Examples:
 - ✅ A video player component
 - ❌ A component that plays video or audio files
 
-## Cross-Platform
+### Cross-Platform
 
 Adalo components are built in React Native, and that means it’s easy to build for iOS, Android, and Web! Adalo’s users expect components to work consistently across all three platforms, and as developers, we should strive to honor this.
 
@@ -28,7 +41,7 @@ Examples:
 - ✅ Maps component that uses Mapbox for Web, Google Maps on Android, and Apple Maps on Web
 - ❌ Web-only mapbox component that cannot be used on other platforms
 
-## Configurable
+### Configurable
 
 Components should strive to be highly configurable & general purpose to allow for maximum flexibility in a variety of different use cases.
 
@@ -43,7 +56,8 @@ Examples:
 - ✅ Slider with colors, minimum, maximum, and step controls
 - ❌ Pre-styled slider that allows users to select values from 1-5
 
-Universal
+### Universal
+
 Adalo app creators and their users live in all parts of the world and all components should work regardless of someone’s location.
 
 - All text should be configurable and not hard-coded

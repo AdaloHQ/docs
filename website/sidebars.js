@@ -33,21 +33,17 @@ module.exports = {
       "docs/interactions/control-types",
       "docs/interactions/conditional-control",
     ],
+    "Component Standards": [
+      "docs/standards/philosophy",
+      "docs/standards/component-listing",
+      "docs/standards/manifest",
+      "docs/standards/code",
+    ],
   },
   "API Reference": {
     Configuration: [
       "api-reference/configuration/package-json",
       "api-reference/configuration/manifest-json",
-    ],
-  },
-  "Library Guidelines": {
-    "Core Standards": [
-      "guidelines/core-standards/philosophy",
-      "guidelines/core-standards/ux-design",
-    ],
-    Design: [
-      "guidelines/design/logo-guidelines",
-      "guidelines/design/thumbnail-guidelines",
     ],
   },
 };
