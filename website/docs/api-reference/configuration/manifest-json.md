@@ -308,18 +308,20 @@ The styles property allows for custom edit styles with text properties. Any prop
 
 ```json
 {
-  "props": {
-    "name": "title",
-    "displayName": "Title",
-    "type": "text",
-    "styles": {
-      "fontFamily": "@body",
-      "fontSize": 16,
-      "fontWeight": 500,
-      "textAlignment": "center",
-      "color": "@primary"
+  "props": [
+    {
+      "name": "title",
+      "displayName": "Title",
+      "type": "text",
+      "styles": {
+        "fontFamily": "@body",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "textAlignment": "center",
+        "color": "@primary"
+      }
     }
-  }
+  ]
 }
 ```
 
