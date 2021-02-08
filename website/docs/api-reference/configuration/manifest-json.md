@@ -272,6 +272,57 @@ Whether or not to show this prop in the UI. Useful for `formChangeHandler` or an
 }
 ```
 
+### `styles`
+
+- type: `Object`
+- default: `null`
+- required prop type: `text`
+
+The styles property allows for custom edit styles with text properties. Any properties you add to the styles object is what will be available in the "Edit Styles" toolbar.
+
+#### `fontFamily`
+
+- type: `String`
+- options: `@body`, `@heading`
+
+#### `fontWeight`
+
+- type: `Number`
+- options: `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
+
+#### `fontSize`
+
+- type: `Number`
+
+#### `textAlignment`
+
+- type: `String`
+- options: `left`, `center`, `right`
+
+#### `color`
+
+- type: `String`
+- options: `@primary`, `@secondary`, `@text`
+
+#### Example
+
+```json
+{
+  "props": {
+    "name": "title",
+    "displayName": "Title",
+    "type": "text",
+    "styles": {
+      "fontFamily": "@body",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "textAlignment": "center",
+      "color": "@primary"
+    }
+  }
+}
+```
+
 ## Reserved Prop Names
 
 ### `enabled`
