@@ -19,7 +19,7 @@ To become an Adalo developer, you must [enable developer mode](enabling-dev-mode
 
 ### Prerequisites
 
-In order to develop external components for Adalo, you must have [Node](https://nodejs.org) `>=10.2` installed. See [testing](../workflow/testing) for the prerequisites required to test on mobile.
+In order to develop external components for Adalo, you must use macOS >= 10.10, or GNU/Linux kernel >= 2.6.32, and have [Node](https://nodejs.org) `>=10.2` installed. See [testing](../workflow/testing) for the prerequisites required to test on mobile.
 
 These docs assume you understand Javascript fundamentals and the [EMCAScript 2015](https://flaviocopes.com/ecmascript/) standard, and have a working knowledge of both [React](https://reactjs.org/) and [React Native](https://reactnative.dev/).
 
