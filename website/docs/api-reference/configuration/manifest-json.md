@@ -429,7 +429,6 @@ Then your component will receive the following props:
 ## Lists
 
 Components that intend to display dynamic lists of content must conform to a particular format in order to receive the necessary information.
-
 ### List Prop Type
 
 Lists must have one top-level prop of type `list`. The name of this prop will be referenced in child components.
@@ -445,6 +444,33 @@ Inside the editor, that prop will now have access to "current list item", and in
 
 For example, if your list is called "list", and the prop you just added the role and reference to is called "prop", you would access that prop with: `this.props.list[i].prop`, where `i` is an index.
 
+### List Control
+Lists may have an optional `listControl` prop that allows a component to opt out of list controls (ex. filtering, sorting, etc.). All options default to true.
+
+#### List controls
+| Name              | Description                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| `filter`          | allows makers to filter items out of their source                                            |
+| `sort`            | allows makers to sort the data from their source                                             |
+| `limit`           | sets a limit on the amount of data sent to the component                                     |
+| `advancedOptions` | currently includes the ability to auto refresh the list when a user adds an item             |
+
+#### Example
+The following example shows what a list with the `sort` and `filter` controls disabled will look like.
+#### `manifest.json`
+```json
+{
+  ...
+  props: [
+    {
+      "name": "listItems",
+      "displayName": "Select list items",
+      "type": "list",
+      "listControl": {"sort": false, "filter": false},
+    }
+  ],
+}
+```
 ### Child Components
 
 `childComponents` items can also be given the `role: "listItem"` and `ref` attributes to be considered list item props.
