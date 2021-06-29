@@ -32,6 +32,7 @@ module.exports = {
       "docs/interactions/child-components",
       "docs/interactions/control-types",
       "docs/interactions/conditional-control",
+      "docs/interactions/form-components",
     ],
     "Component Standards": [
       "docs/standards/philosophy",
