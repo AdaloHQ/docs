@@ -97,7 +97,7 @@ You can find more information about this in the [component manifest](https://dev
 
 ## Disabling List Controls
 
-Makers have access to a number of controls when working with lists. If you wish to disable any of these controls that can be done by adding the `listControl` prop to your `manifest.json` file. All list controls will default to being visible unless specified otherwise. Below is an example of how you can disable the option for a user to sort and filter the items in a list:
+Makers have access to a number of controls when working with lists. If you wish to disable any of these controls, that can be done by adding the `listControl` prop to your `manifest.json` file. All list controls will default to being visible unless specified otherwise. Below is an example of how you can disable the option for a user to sort and filter the items in a list:
 
 ```json
 {
@@ -113,7 +113,15 @@ Makers have access to a number of controls when working with lists. If you wish 
 }
 ```
 
-You can find more information about this in the [component manifest](https://developers.adalo.com/api-reference/configuration/manifest-json#List-Controls) documentation.
+This will change the editor from its default appearance:
+
+<img src="/img/Default-List-Control.png" />
+
+To this, where the `sort` and `filter` controls have been disabled:
+
+<img src="/img/List-Control-Filter&Sort-Disabled.png" />
+
+You can find more information about the `listControl` prop and the different list controls in the [component manifest](/api-reference/configuration/manifest-json#listcontrol) documentation.
 
 ## Modifying Values in the Database
 

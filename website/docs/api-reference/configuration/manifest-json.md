@@ -231,6 +231,7 @@ This is used to show or hide specific list control elements for a prop of type `
 | `limit`           | sets a limit on the amount of data sent to the component                                     |
 | `advancedOptions` | currently includes the ability to auto refresh the list when a user adds an item             |
 
+Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
 <!-- TODO: Link to control-types page -->
 > `listControl` is exclusive to props of type `list`
 
