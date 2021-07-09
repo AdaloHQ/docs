@@ -232,7 +232,6 @@ This is used to show or hide specific list control elements for a prop of type `
 | `advancedOptions` | allows makers to auto-refresh a list when an item is added or removed            |
 
 Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
-<!-- TODO: Link to control-types page -->
 > `listControl` is exclusive to props of type `list`
 
 ### `role`
