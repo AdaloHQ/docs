@@ -228,8 +228,8 @@ This is used to show or hide specific list control elements for a prop of type `
 | ----------------- | -------------------------------------------------------------------------------------------- |
 | `filter`          | allows makers to filter items out of their source                                            |
 | `sort`            | allows makers to sort the data from their source                                             |
-| `limit`           | sets a limit on the amount of data sent to the component                                     |
-| `advancedOptions` | currently includes the ability to auto refresh the list when a user adds an item             |
+| `limit`           | allows makers to set a limit on the amount of data sent to the component                                     |
+| `advancedOptions` | allows makers to auto-refresh a list when an item is added or removed            |
 
 Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
 <!-- TODO: Link to control-types page -->
