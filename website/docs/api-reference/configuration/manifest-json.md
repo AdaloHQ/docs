@@ -219,6 +219,21 @@ Customize the type of control presented to the user
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major control types.
 
+### `listControl`
+- Type: `Object`
+
+This is used to show or hide specific list control elements for a prop of type `list`. All control types will default to being shown unless specified otherwise
+#### List controls
+| Name              | Description                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| `filter`          | allows makers to filter items out of their source                                            |
+| `sort`            | allows makers to sort the data from their source                                             |
+| `limit`           | allows makers to set a limit on the amount of data sent to the component                                     |
+| `advancedOptions` | allows makers to auto-refresh a list when an item is added or removed            |
+
+Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
+> `listControl` is exclusive to props of type `list`
+
 ### `role`
 
 - Type: `String`
@@ -429,7 +444,6 @@ Then your component will receive the following props:
 ## Lists
 
 Components that intend to display dynamic lists of content must conform to a particular format in order to receive the necessary information.
-
 ### List Prop Type
 
 Lists must have one top-level prop of type `list`. The name of this prop will be referenced in child components.
