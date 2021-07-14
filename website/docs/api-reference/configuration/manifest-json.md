@@ -228,8 +228,7 @@ Designate this as a special prop.
 | Key                 | Type | Description                                                                                                                                                                                                                                             |
 | ------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `listItem`          |      | This prop will be a list child: See [Lists]()                                                                                                                                                                                                           |
-| `formValue`         |      | This prop is the `value` of a controlled input. The value passed here will act as the default value of the component. The value of `formValue` can be exported to other components throughout a makers app                                                                                                                                                                                                          |
-| `formChangeHandler` |      | This prop is the `onChange` of a controlled input: `type` should be `"action"`. Calling this action will update the `formValue`, as well as execute any action that the maker has set                                                                                                                                                                          |
+| `formValue`         |      |Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](). `value` will initially be given the value passed to the prop and can have its value exported throughout the app. `onChange` is the event handler function that can be used to update `value`. |                                                                                    
 | `autosaveInput`     |      | Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
@@ -241,7 +240,6 @@ Also see [Control Types](/docs/interactions/control-types) for an explanation of
 Used in conjunction with `role` to reference a related prop.
 
 - If role is `"listItem"` this should be a prop with `type: "list"`
-- If role is `"formChangeHandler"` this should be the `"formValue"` prop name
 
 ### `helpText`
 
@@ -543,15 +541,11 @@ testAction(arg1, arg2);
 
 ## Component Data
 
-Components that intend to export data throughout an app must implement specific props in order to export the desired data.
+Components that intend to export data throughout an app must implement the `formValue` prop in orer to do so
 
-### FormValue Prop
+### `formValue` Prop
 
-The value that a form component intends to export must be given the role of `formValue`. This value will be accessible to other components in the form of Magic Text. The component itself will be passed props `{prop name}`, of which the value will update as the `formChangeHandler` is called, as well as `{prop name}_initial`, who's value will always be equal to the initial value of the prop.
-
-### FormChangeHandler Prop
-
-In order to update the value of a prop with role `formValue`, a component must also have a prop with the role `formChangeHandler`. This prop should always be of type action and reference the `formValue` prop. Calling the `formChangeHandler` will update the value of the referenced `formValue` prop, as well as executing an action if one has been assigned by the maker. 
+The value that a form component intends to export must be given the role of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
 
 ### Example
 
@@ -566,13 +560,6 @@ In order to update the value of a prop with role `formValue`, a component must a
       "displayName": "Example Form Value",
       "type": "text",
       "role": "formValue"
-    },
-    {
-      "name": "exampleFormChangeHandler",
-      "displayName": "Example Form Change Handler",
-      "type": "action",
-      "role": "formChangeHandler",
-      "reference": "exampleFormValue"
     }
   ]
 }

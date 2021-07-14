@@ -3,7 +3,7 @@ id: component-data
 title: Component Data
 ---
 
-Component data is exported from your component for use in the rest of a makers app in the form of Magic Text. You can implement Component Data into your component by declaring props with the roles of `formValue` and `formChangeHandler` in the component manifest:
+Component data is exported from your component for use in the rest of a makers app in the form of Magic Text. You can implement Component Data into your component by assigning props the role of `formValue` in the component manifest:
 
 ```json
 {
@@ -14,34 +14,23 @@ Component data is exported from your component for use in the rest of a makers a
       "displayName": "Example Form Value",
       "type": "text",
       "role": "formValue"
-    },
-    {
-      "name": "exampleFormChangeHandler",
-      "displayName": "Example Form Change Handler",
-      "type": "action",
-      "role": "formChangeHandler",
-      "reference": "exampleFormValue"
     }
   ]
 }
 ```
 
-In the code, `exampleFormChangeHandler` will now refer to a function that will update `exampleFormValue` and execute an action, if one has been set, when called, `exampleFormValue` will refer to the value that the component is exporting and will be updated when `exampleFormChangeHandler` is called, and `exampleFormValue_initial` will refer to the initial value of `exampleFormValue`. These values can be used like so:
+In the code, `exampleFormValue` will now refer to a `{ value, onChange }` object. `exampleFormValue.onChange` is a function that will update `exampleFormValue.value` when called. `exampleFormValue.onChange` should be called as an event handler function. `exampleFormValue.value` will refer to the value that the component is executing and can be accessed throughout the app as Magic Text. An additional prop, `exampleFormValue_initial`, will also be passed to the component. This prop will always refer to the initial value of `exampleFormValue.value` and can be useful for purposes such as setting placeholder values. These values can be used in the code like so:
 
 ```javascript
 exampleComponent = (props)=> {
-    let { exampleFormValue, exampleFormValue_initial, exampleFormChangeHandler } = props
+    let { exampleFormValue, exampleFormValue_initial } = props
 
     return (
         <TextInput
-            onChangeText={exampleFormChangeHandler}
-            value={exampleFormValue}
+            onChangeText={exampleFormValue.onChange}
+            value={exampleFormValue.value}
             placeholder={exampleFormValue_initial}
         />
     )
 }
 ```
-
-### `formChangeHandler` Actions
-
-In addition to updating the `formValue`, the `formChangeHandler` can also execute an action set by the maker. This allows users to, for example, update an objects property live as they type. This functionality can be disabled by using the `hidden` property on the `formChangeHandler` prop. The `formChangeHandler` will still need to be called in order to update the `formValue`, but the maker will no longer have the option to assign an additional action.
