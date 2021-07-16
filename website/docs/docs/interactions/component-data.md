@@ -21,7 +21,8 @@ Component data is exported from your component for use in the rest of a makers a
 
 In the code, `exampleFormValue` will now refer to a `{ value, onChange }` object. 
 
-`exampleFormValue.onChange` is a function that should be caused as an event handler, it will update `exampleFormValue.value` when called. `exampleFormValue.value` will refer to the value that the component is exporting and can be accessed throughout the app as Magic Text. An additional prop, `exampleFormValue_initial`, will also be passed to the component. This prop will always refer to the initial value of `exampleFormValue.value` and can be useful for purposes such as setting placeholder values.
+When called, `exampleFormValue.onChange` will update `exampleFormValue.value`. `exampleFormValue.value` refers to the value that the component is exporting and can be accessed throughout the app as Magic Text. 
+An additional prop, `exampleFormValue_initial`, will also be passed to the component. This prop will always refer to the initial value of `exampleFormValue.value` and can be useful for purposes such as setting placeholder values.
 
  These values can be used in the code like so:
 
