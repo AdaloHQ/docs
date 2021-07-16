@@ -541,7 +541,7 @@ testAction(arg1, arg2);
 
 ## Component Data
 
-Components that intend to export data throughout an app must implement the `formValue` prop in orer to do so
+Components that intend to export data throughout an app must implement the `formValue` prop in order to do so.
 
 ### `formValue` Prop
 
