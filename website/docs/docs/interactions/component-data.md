@@ -28,7 +28,7 @@ When called, `exampleFormValue.onChange` will update `exampleFormValue.value`. `
 
 ```javascript
 exampleComponent = (props)=> {
-    const { exampleFormValue, exampleFormValue_initial } = props
+    const { exampleFormValue } = props
 
     return (
         <TextInput
