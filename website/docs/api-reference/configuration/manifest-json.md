@@ -146,7 +146,7 @@ The name to show in the Adalo editor and displayed to the end user
 - **Required**
 
 The type of value that is expected. These follow Adalo's datatypes. The type will change what gets rendered in the left panel in the editor.
-
+<!-- TODO: add `see more` link for file and image types -->
 | Type      | Description                                                                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `text`    | Arbitrary text. This may be either static or dynamic.                                                                                                                                                      |
@@ -155,6 +155,8 @@ The type of value that is expected. These follow Adalo's datatypes. The type wil
 | `icon`    | The name of a material icon to use. For a full list of possible icon name, see [Material Icons](https://oblador.github.io/react-native-vector-icons/)                                                      |
 | `color`   | A color string: `#ffffff` or `rgba(255, 255, 255, 1)`. See the [colors and branding](/docs/design/colors-branding) reference for more information.                                                         |
 | `date`    | An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string: `"2018-01-01T00:00:00.000Z"`                                                                                                            |
+| `file`    | A url to a hosted file. |
+| `image`   | A url to a hosted image. |
 | `list`    | An array of dynamic data. See [Lists](#lists)                                                                                                                                                              |
 | `action`  | A user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed. |
 
@@ -246,6 +248,7 @@ Designate this as a special prop.
 | `formValue`         |      | This prop is the `value` of a controlled input                                                                                                                                                                                                          |
 | `formChangeHandler` |      | This prop is the `onChange` of a controlled input: `type` should be `"action"`                                                                                                                                                                          |
 | `autosaveInput`     |      | Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
+| `upload`            | `file` | Instead of the normal vlaue, this prop will pass a `{ value, upload }` object. Value will be the url of hte file, and `upload` will be a function that takes in a new url and new file name to update the database entry for a file. |
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
 

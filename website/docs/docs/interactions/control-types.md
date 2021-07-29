@@ -156,3 +156,53 @@ Here's what the first one looks like in the editor:
 And here's what the second one looks like in the editor:
 
 <img src="/img/autosaveInput-example-lists.png" alt='Autosave Input Example' />
+
+## Modifying Files in the Database
+
+Sometimes you want your component to update files stored in the database. For example, you may want users to be able to upload an updated resume to their account. All you have to do to gain access to a file in the database is add the role `upload` to the file prop you want to be able to update. For example: 
+
+```json
+{
+  ...
+  "props": [
+    {
+      "name": "exampleFile",
+      "displayName": "Example File",
+      "type": "file",
+      "role": "upload"
+    },
+  ]
+}
+```
+
+Now, a prop `exampleFile` will be passed to hte React component with the structure: `{ value: url, upload: f() }` where `value` is the hosted url of hte file in the database, and `upload` is a function that can be called to change that file. The `upload` function takes two arguments, the url of a new file (which can either be local or hosted), as well as the name of the new file. 
+
+It's a little tricky to test this prop because getting access to an individually adjustable prop isn't trivial. There are two quick ways to do this:
+
+- Add a file property to the users table, then, log in the user somewhere on your test app and that component will then get access to "Logged in user => file".
+- Make a list, and then make a click property of that list link the user to another screen. The next screen will then have access to the individual props of current list item.
+
+<!-- TODO: update these images -->
+Here's what the first one looks like in the editor:
+
+<img src="/img/autosaveInput-example-loggedInUser.png" alt='Autosave Input Example' />
+
+And here's what the second one looks like in the editor:
+
+<img src="/img/autosaveInput-example-lists.png" alt='Autosave Input Example' />
+
+## Modifying Values or Files That are Part of a List
+
+Sometimes the values or files that you want to modify in the database may be part of a list. In order to give a prop teh `autosaveInput` or `upload` role, as well as the `listItem` role, you must set the `role` prop to an array containing the two values as opposed to a string of one value. For example, a prop with the roles of `listItem` and `autosaveInput` would look like: 
+
+```json
+{
+  ...
+  "props": [
+    ...,
+    {
+      ...
+      "role": ["listItem", "autosaveInput"]
+    }
+  ]
+}
