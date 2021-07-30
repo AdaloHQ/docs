@@ -236,6 +236,16 @@ This is used to show or hide specific list control elements for a prop of type `
 Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
 > `listControl` is exclusive to props of type `list`
 
+### `accepted`
+- Type: `Array`
+
+This is used to set what file types are valid when a maker uses the `upload` method of selecting a file.
+
+`accepted` takes in an array of valid file type specifiers (as strings). These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers).
+
+
+> `accepted` is exclusive to props of type `file`
+
 ### `role`
 
 - Type: `String`
@@ -248,7 +258,6 @@ Designate this as a special prop.
 | `formValue`         |      | This prop is the `value` of a controlled input                                                                                                                                                                                                          |
 | `formChangeHandler` |      | This prop is the `onChange` of a controlled input: `type` should be `"action"`                                                                                                                                                                          |
 | `autosaveInput`     |      | Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
-| `upload`            | `file` | Instead of the normal vlaue, this prop will pass a `{ value, upload }` object. Value will be the url of hte file, and `upload` will be a function that takes in a new url and new file name to update the database entry for a file. |
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
 
