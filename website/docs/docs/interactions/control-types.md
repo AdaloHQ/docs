@@ -159,7 +159,7 @@ And here's what the second one looks like in the editor:
 
 <img src="/img/autosaveInput-example-lists.png" alt='Autosave Input Example' />
 
-## Modifying Values That are Part of a List
+## Modifying Values From a List
 
 Sometimes the values or files that you want to modify in the database may be part of a list. In order to give a prop teh `autosaveInput` or `upload` role, as well as the `listItem` role, you must set the `role` prop to an array containing the two values as opposed to a string of one value. For example, a prop with the roles of `listItem` and `autosaveInput` would look like: 
 
