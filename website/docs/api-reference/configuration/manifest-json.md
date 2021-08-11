@@ -545,7 +545,7 @@ Components that intend to export data throughout an app must implement the `form
 
 ### `formValue` Prop
 
-The value that a form component intends to export must be given the role of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
+The value that a form component intends to export must be given a `role` of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, the component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
 
 ### Example
 
