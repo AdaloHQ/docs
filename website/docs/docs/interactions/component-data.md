@@ -3,7 +3,7 @@ id: component-data
 title: Component Data
 ---
 
-Component data is exported from your component for use in the rest of a makers app in the form of Magic Text. You can implement Component Data into your component by assigning props the role of `formValue` in the component manifest:
+Besides actions, component data is another way to connect your component to the rest of the Adalo ecosystem. Makers can use component data by accessing it through Magic Text. You can implement Component Data into your component by assigning props the role of `formValue` in the component manifest:
 
 ```json
 {
