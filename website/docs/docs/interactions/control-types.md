@@ -95,6 +95,34 @@ In order to access the current list item as magic text within the action, you mu
 
 You can find more information about this in the [component manifest](https://developers.adalo.com/api-reference/configuration/manifest-json#role) documentation.
 
+## Disabling List Controls
+
+Makers have access to a number of controls when working with lists. If you wish to disable any of these controls, that can be done by adding the `listControl` prop to your `manifest.json` file. All list controls will default to being visible unless specified otherwise. Below is an example of how you can disable the option for a user to sort and filter the items in a list:
+
+```json
+{
+  ...
+  props: [
+    {
+      "name": "listItems",
+      "displayName": "Select list items",
+      "type": "list",
+      "listControl": {"sort": false, "filter": false},
+    }
+  ],
+}
+```
+
+This will change the editor from its default appearance:
+
+<img src="/img/Default-List-Control.png" />
+
+To this, where the `sort` and `filter` controls have been disabled:
+
+<img src="/img/List-Control-Filter&Sort-Disabled.png" />
+
+You can find more information about the `listControl` prop and the different list controls in the [component manifest](/api-reference/configuration/manifest-json#listcontrol) documentation.
+
 ## Modifying Values in the Database
 
 Sometimes you want your component to actually directly modify values in the database. For example, a switch component would be pretty useless if it couldn't switch a property in the database. All you have to do to get access to the database is add the role `autosaveInput` to a component. For example:
