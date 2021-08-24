@@ -258,6 +258,12 @@ Designate this as a special prop.
 | `formValue`         |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](https://developers.adalo.com/api-reference/configuration/manifest-json#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |                                                                                    
 | `autosaveInput`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
 
+:::note
+
+When using the `formValue` or `autosaveInput` roles, the `onChange` function should be passed the new value that you want the prop to take. The method of doing this varies slightly with a prop of type `image` or `file`. In these instances, the `newValue` passed to the `onChange` function should be an object that contains the new filename, as well as the data or uri of the new file. ex. `{ filename, data }` or `{ filename, uri }`. If both data and a uri are included in the object, the data field will be used.
+
+:::
+
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
 
 ### `reference`
@@ -572,7 +578,6 @@ Components that intend to export data throughout an app must implement the `form
 ### `formValue` Prop
 
 The value that a form component intends to export must be given a `role` of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, the component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
-
 ### Example
 
 #### `manifest.json`

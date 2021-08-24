@@ -78,15 +78,17 @@ exampleFunc = () => {
 };
 ```
 
-### Arguments as Magic Text - Files and Images
+:::note
 
-Sending the values to Adalo varies slightly when dealing with files or images. In the code, files and images should be passed to the action as `{ url, filename }` objects. In the code this will look like:
+Sending the values to Adalo varies slightly when dealing with files or images. In the code, files and images should be passed to the action as `{ uri, filename }` or `{ data, filename }` objects. If an object contains both `uri` and `data` fields, the `data` field will be used. In the code this will look like:
 
 ```javascript
 exampleFunc = () => {
-  const fileArgument = { url: 'exampleurl.pdf', filename: 'examplePDF' }
-  const imageArgument = { url: 'exampleurl.jpg', filename: 'exampleJPG' }
+  const fileArgument = { uri: 'exampleurl.pdf', filename: 'examplePDF' }
+  const imageArgument = { data: exampleImageData, filename: 'exampleJPG' }
   const { exampleAction } = this.props;
   if (exampleAction) exampleAction(fileArgument, imageArgument)
 }
 ```
+
+:::
