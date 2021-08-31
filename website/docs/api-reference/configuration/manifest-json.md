@@ -243,9 +243,8 @@ Designate this as a special prop.
 | Key                 | Type | Description                                                                                                                                                                                                                                             |
 | ------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `listItem`          |      | This prop will be a list child: See [Lists]()                                                                                                                                                                                                           |
-| `formValue`         |      | This prop is the `value` of a controlled input                                                                                                                                                                                                          |
-| `formChangeHandler` |      | This prop is the `onChange` of a controlled input: `type` should be `"action"`                                                                                                                                                                          |
-| `autosaveInput`     |      | Instead of the normal value, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
+| `formValue`         |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](https://developers.adalo.com/api-reference/configuration/manifest-json#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |                                                                                    
+| `autosaveInput`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
 
@@ -256,7 +255,6 @@ Also see [Control Types](/docs/interactions/control-types) for an explanation of
 Used in conjunction with `role` to reference a related prop.
 
 - If role is `"listItem"` this should be a prop with `type: "list"`
-- If role is `"formChangeHandler"` this should be the `"formValue"` prop name
 
 ### `helpText`
 
@@ -553,4 +551,30 @@ When you call the action in your code, you just have to call the action with the
 ```javascript
 const { testAction } = this.props;
 testAction(arg1, arg2);
+```
+
+## Component Data
+
+Components that intend to export data throughout an app must implement the `formValue` prop in order to do so.
+
+### `formValue` Prop
+
+The value that a form component intends to export must be given a `role` of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, the component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
+
+### Example
+
+#### `manifest.json`
+
+```json
+{
+  ...
+  "props": [
+    {
+      "name": "exampleFormValue",
+      "displayName": "Example Form Value",
+      "type": "text",
+      "role": "formValue"
+    }
+  ]
+}
 ```
