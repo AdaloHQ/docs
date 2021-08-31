@@ -42,6 +42,6 @@ exampleComponent = (props)=> {
 
 :::note 
 
-Using the `onChange` function with the `file` or `image` datatype varies slightly. When dealing with files or images, the `onChange` function should be passed on object containing `filename` and `uri` or `data` fields for the new value. This can look like `{ uri, filename }` or `{ data, filename }`. If an object contains both `data` and `uri` fields, the `data` field will be used. 
+Using the `onChange` function with the `file` or `image` datatype varies slightly. For more information, see [Files and Images](./files-and-images).
 
-::
+:::

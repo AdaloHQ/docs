@@ -260,7 +260,7 @@ Designate this as a special prop.
 
 :::note
 
-When using the `formValue` or `autosaveInput` roles, the `onChange` function should be passed the new value that you want the prop to take. The method of doing this varies slightly with a prop of type `image` or `file`. In these instances, the `newValue` passed to the `onChange` function should be an object that contains the new filename, as well as the data or uri of the new file. ex. `{ filename, data }` or `{ filename, uri }`. If both data and a uri are included in the object, the data field will be used.
+When using the `formValue` or `autosaveInput` roles, the `onChange` function should be passed the new value that you want the prop to take. The method of doing this varies slightly with a prop of type `image` or `file`. For more information, see [Files and Images](/docs/interactions/files-and-images).
 
 :::
 
