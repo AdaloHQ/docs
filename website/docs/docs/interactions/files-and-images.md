@@ -13,6 +13,10 @@ Props of type `file` or `image` will pass their values to the component as an ob
 
 When a prop of type `file` or `image` is given the role of either `formValue` or `autosaveInput`, the usage of the resulting `onChange` function will vary from it's usage with other datatypes. When working with these types, the `onChange` function will need to be passed an object containing the `filename` and the `uri` (either local or hosted) or `data` (as a base64 encoded string) of the new file, ex: `{ uri, filename }` or `{ data, filename }`. If the object contains both `data` and `uri`, the `data` field will be used by default.
 
+:::note
+The `filename` passed to the `onChange` function must contain the file extension. ex. .JPG, .PDF, .PNG, etc.
+:::
+
 ## Action Arguments
 
 Using action arguments with the `file` and `image` types varies in a similar way to the `onChange` function for the `formValue` and `autosaveInput` roles. When being passed as arguments, files and images should be structured as an object containing a `filename` and `uri` (either local or hosted) or `data` (as a base64 encoded string) for the file/image being passed to the function. Like with the `onChange` function, if both `uri` and `data` fields are present in the object the `data` field will be used by default. in the code, this looks like:
@@ -25,3 +29,7 @@ exampleFunc = () => {
   if (exampleAction) exampleAction(fileArgument, imageArgument)
 }
 ```
+
+:::note
+The `filename` field of the argument must contain the file extension. ex. .JPG, .PDF, .PNG, etc.
+:::
