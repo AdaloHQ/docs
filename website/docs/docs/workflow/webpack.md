@@ -39,7 +39,7 @@ Make sure to make your config the only export of the webpack config file.
 
 If you choose to specify your own webpack config file, you are welcome to use this file as a starting point.
 
-> This example expects you to have the Adalo CLI installed as a dev dependency of your component: `yarn install --dev @adalo/cli`
+> This example expects you to have the Adalo CLI installed as a dev dependency of your component: `yarn add --dev @adalo/cli`
 
 ```javascript
 const webpack = require('webpack')
