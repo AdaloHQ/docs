@@ -43,7 +43,7 @@ If you choose to specify your own webpack config file, you are welcome to use th
 
 ```javascript
 const webpack = require('webpack')
-const {AdaloDefaultConfig} = require('@adalo/cli/src/webpackConfig')
+const { AdaloDefaultConfig } = require('@adalo/cli/src/webpackConfig')
 
 /**
  * Determine if we're in dev mode or production mode based on the 
