@@ -3,10 +3,6 @@ id: publishing
 title: Publishing
 ---
 
-:::important
-Publishing is currently not supported on Windows.
-:::
-
 Publishing your awesome new Library to Adalo is very simple! Simply run the `publish` command while in the root of your Library directory:
 
 ```bash
