@@ -8,6 +8,8 @@ import TabItem from '@theme/TabItem';
 
 Not only is it important that you write your component to be cross-platform, you must also test your component on all platforms. 
 
+If you are trying to test a library after you've published it, check out [testing after publishing](/docs/workflow/testing-after-publishing).
+
 <Tabs
   defaultValue="web"
   values={[

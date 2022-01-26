@@ -13,11 +13,13 @@ module.exports = {
     Workflow: [
       "docs/workflow/cross-platform",
       "docs/workflow/testing",
+      "docs/workflow/testing-after-publishing",
       "docs/workflow/webpack",
       "docs/workflow/install-scripts",
       "docs/workflow/publishing",
       "docs/workflow/managing-private-components",
       "docs/workflow/backwards-compatibility",
+      "docs/workflow/sharing",
     ],
     Design: [
       "docs/design/design-requirements",
