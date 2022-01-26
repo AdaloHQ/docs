@@ -1,9 +1,11 @@
 ---
-id: testing-after-publishing
-title: Testing After Publishing
+id: managing-public-libraries
+title: Managing Public Libraries
 ---
 
-After you publish and before the team approves your library (or a new version), you can access your components while they are in review.
+After you publish a public library, it will be automatically marked for review. The new version will be made live once the Adalo team reviews and approves it.
+
+While the new version is in review, you can still access it!
 
 To do this:
 
