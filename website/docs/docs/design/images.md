@@ -13,7 +13,7 @@ Sometimes, instead of rendering certain parts of your component in the editor, y
 
 Inside a component's manifest, one of the [Adalo datatypes](/api-reference/configuration/manifest-json#type) you can use is the image datatype.
 
-In order to use images in Adalo, you must import and use the ```Image``` component provided by React Native instead of React's `<img>` tag.
+In order to use images in Adalo, you must import and use the `Image` component provided by React Native instead of React's `<img>` tag.
 
 Use this example and React Native's [documentation](https://reactnative.dev/docs/image) for reference:
 
@@ -35,5 +35,5 @@ class MyComponent extends Component {
 }
 ```
 :::note
-```Image``` components will only render if both width and height are specified. ```img``` tags will not render in the application preview.
+`Image` components will only render if both width and height are specified. `img` tags will not render in the application preview.
 :::
