@@ -18,6 +18,7 @@ module.exports = {
       "docs/workflow/publishing",
       "docs/workflow/managing-public-libraries",
       "docs/workflow/managing-private-libraries",
+      "docs/workflow/paid-libraries",
       "docs/workflow/backwards-compatibility",
     ],
     Design: [
