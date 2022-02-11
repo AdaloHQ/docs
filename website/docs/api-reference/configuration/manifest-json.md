@@ -241,7 +241,10 @@ Also see [Disabling List Controls](/docs/interactions/control-types#disabling-li
 
 This is used to set what file types are valid when a maker uses the `upload` method of selecting a file.
 
-`accepted` takes in an array of valid file type specifiers (as strings). These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers).
+<!-- TODO: change this to the list of files we accept in frontend -->
+`accepted` takes in an array of valid file type specifiers (as strings). Valid specifiers are: `image/jpeg`, `image/png`, `image/gif`, `video/mp4`, `video/avi`, `video/mpeg`, `video/quicktime`, `video/x-msvideo`, `video/x-ms-wmv`, `video/webm`, `video/ogg`, `audio/mpeg`, `audio/mp4`, `application/pdf`, `application/x-compressed`, `application/x-zip/compressed`, `application/zip`, `application/x-zip`, `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, and `application/vnd.openxmlformats-officedocument.presentationml.presentation`
+
+<!-- These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers). -->
 
 
 > `accepted` is exclusive to props of type `file`

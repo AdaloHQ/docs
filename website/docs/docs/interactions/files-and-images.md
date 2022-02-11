@@ -23,13 +23,21 @@ Using action arguments with the `file` and `image` types varies in a similar way
 
 ```javascript
 exampleFunc = () => {
-  const fileArgument = { uri: 'exampleurl.pdf', filename: 'examplePDF' }
-  const imageArgument = { data: exampleImageData, filename: 'exampleJPG' }
+  const fileArgument = { uri: "exampleurl.pdf", filename: "examplePDF" };
+  const imageArgument = { data: exampleImageData, filename: "exampleJPG" };
   const { exampleAction } = this.props;
-  if (exampleAction) exampleAction(fileArgument, imageArgument)
-}
+  if (exampleAction) exampleAction(fileArgument, imageArgument);
+};
 ```
 
 :::note
 The `filename` field of the argument must contain the file extension. ex. .JPG, .PDF, .PNG, etc.
+:::
+
+:::note
+The maximum file upload size when using `formValue`, `autosaveInput`, or `actionArguments` is 50 megabytes
+:::
+
+:::note
+When implementing files or images into your components, it is important to remember that they are loaded via network requests. In order to maximize performance and create a smooth user experience use placeholders, as well as techniques such as lazy loading and caching to minimize wait times and improve user experience  
 :::
