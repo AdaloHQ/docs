@@ -146,7 +146,9 @@ The name to show in the Adalo editor and displayed to the end user
 - **Required**
 
 The type of value that is expected. These follow Adalo's datatypes. The type will change what gets rendered in the left panel in the editor.
+
 <!-- TODO: add `see more` link for file and image types -->
+
 | Type      | Description                                                                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `text`    | Arbitrary text. This may be either static or dynamic.                                                                                                                                                      |
@@ -155,8 +157,8 @@ The type of value that is expected. These follow Adalo's datatypes. The type wil
 | `icon`    | The name of a material icon to use. For a full list of possible icon name, see [Material Icons](https://oblador.github.io/react-native-vector-icons/)                                                      |
 | `color`   | A color string: `#ffffff` or `rgba(255, 255, 255, 1)`. See the [colors and branding](/docs/design/colors-branding) reference for more information.                                                         |
 | `date`    | An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string: `"2018-01-01T00:00:00.000Z"`                                                                                                            |
-| `file`    | A url to a hosted file. |
-| `image`   | A url to a hosted image. |
+| `file`    | A url to a hosted file.                                                                                                                                                                                    |
+| `image`   | A url to a hosted image.                                                                                                                                                                                   |
 | `list`    | An array of dynamic data. See [Lists](#lists)                                                                                                                                                              |
 | `action`  | A user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed. |
 
@@ -222,30 +224,37 @@ Customize the type of control presented to the user
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major control types.
 
 ### `listControl`
+
 - Type: `Object`
 
 This is used to show or hide specific list control elements for a prop of type `list`. All control types will default to being shown unless specified otherwise
+
 #### List controls
-| Name              | Description                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------- |
-| `filter`          | allows makers to filter items out of their source                                            |
-| `sort`            | allows makers to sort the data from their source                                             |
-| `limit`           | allows makers to set a limit on the amount of data sent to the component                                     |
-| `advancedOptions` | allows makers to auto-refresh a list when an item is added or removed            |
+
+| Name              | Description                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| `filter`          | allows makers to filter items out of their source                        |
+| `sort`            | allows makers to sort the data from their source                         |
+| `limit`           | allows makers to set a limit on the amount of data sent to the component |
+| `advancedOptions` | allows makers to auto-refresh a list when an item is added or removed    |
 
 Also see [Disabling List Controls](/docs/interactions/control-types#disabling-list-controls) for an explanation on using the `listControl` prop.
+
 > `listControl` is exclusive to props of type `list`
 
 ### `accepted`
+
 - Type: `Array`
 
 This is used to set what file types are valid when a maker uses the `upload` method of selecting a file.
 
-<!-- TODO: change this to the list of files we accept in frontend -->
-`accepted` takes in an array of valid file type specifiers (as strings). Valid specifiers are: `image/jpeg`, `image/png`, `image/gif`, `video/mp4`, `video/avi`, `video/mpeg`, `video/quicktime`, `video/x-msvideo`, `video/x-ms-wmv`, `video/webm`, `video/ogg`, `audio/mpeg`, `audio/mp4`, `application/pdf`, `application/x-compressed`, `application/x-zip/compressed`, `application/zip`, `application/x-zip`, `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, and `application/vnd.openxmlformats-officedocument.presentationml.presentation`
+These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers).
 
-<!-- These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers). -->
+:::note
 
+For security reasons, we do not accept executable or script files, including, but not limited to, `.exe`, `.sh`, `.js`, and `.jar`.
+
+:::
 
 > `accepted` is exclusive to props of type `file`
 
@@ -255,11 +264,11 @@ This is used to set what file types are valid when a maker uses the `upload` met
 
 Designate this as a special prop.
 
-| Key                 | Type | Description                                                                                                                                                                                                                                             |
-| ------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listItem`          |      | This prop will be a list child: See [Lists]()                                                                                                                                                                                                           |
-| `formValue`         |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](https://developers.adalo.com/api-reference/configuration/manifest-json#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |                                                                                    
-| `autosaveInput`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue` |
+| Key             | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `listItem`      |      | This prop will be a list child: See [Lists]()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `formValue`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](https://developers.adalo.com/api-reference/configuration/manifest-json#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |
+| `autosaveInput` |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue`                                                                                                                                                                                                                                                                                                       |
 
 :::note
 
@@ -463,6 +472,7 @@ Then your component will receive the following props:
 ## Lists
 
 Components that intend to display dynamic lists of content must conform to a particular format in order to receive the necessary information.
+
 ### List Prop Type
 
 Lists must have one top-level prop of type `list`. The name of this prop will be referenced in child components.
@@ -581,6 +591,7 @@ Components that intend to export data throughout an app must implement the `form
 ### `formValue` Prop
 
 The value that a form component intends to export must be given a `role` of `formValue`. This value will be accessible to other components in the form of Magic Text. Instead of the normal value, the component itself will be passed a `{ value, onChange }` object that can be used like a react [Controlled Component](), as well as `${propName}_initial`. `value` will store the data that the component exports, it will be set to the props value by default and be updated by `onChange`, which should be called as an event handler function. `${propName}_initial` is a static value that will always be equal to the initial value of `value`.
+
 ### Example
 
 #### `manifest.json`
