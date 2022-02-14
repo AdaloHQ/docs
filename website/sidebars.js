@@ -16,7 +16,9 @@ module.exports = {
       "docs/workflow/webpack",
       "docs/workflow/install-scripts",
       "docs/workflow/publishing",
-      "docs/workflow/managing-private-components",
+      "docs/workflow/managing-public-libraries",
+      "docs/workflow/managing-private-libraries",
+      "docs/workflow/paid-libraries",
       "docs/workflow/backwards-compatibility",
     ],
     Design: [
