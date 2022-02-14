@@ -39,3 +39,9 @@ exampleComponent = (props)=> {
     )
 }
 ```
+
+:::note 
+
+Using the `onChange` function with the `file` or `image` datatype varies slightly. For more information, see [Files and Images](./files-and-images).
+
+:::

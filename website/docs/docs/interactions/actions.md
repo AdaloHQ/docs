@@ -77,3 +77,9 @@ exampleFunc = () => {
   if (exampleAction) exampleAction(arg1, arg2);
 };
 ```
+
+:::note
+
+Sending the values to Adalo varies slightly when dealing with files or images. For more information, see [Files and Images](./files-and-images).
+
+:::

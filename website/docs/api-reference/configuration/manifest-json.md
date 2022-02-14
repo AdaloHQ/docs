@@ -147,6 +147,8 @@ The name to show in the Adalo editor and displayed to the end user
 
 The type of value that is expected. These follow Adalo's datatypes. The type will change what gets rendered in the left panel in the editor.
 
+<!-- TODO: add `see more` link for file and image types -->
+
 | Type      | Description                                                                                                                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `text`    | Arbitrary text. This may be either static or dynamic.                                                                                                                                                      |
@@ -155,6 +157,8 @@ The type of value that is expected. These follow Adalo's datatypes. The type wil
 | `icon`    | The name of a material icon to use. For a full list of possible icon name, see [Material Icons](https://oblador.github.io/react-native-vector-icons/)                                                      |
 | `color`   | A color string: `#ffffff` or `rgba(255, 255, 255, 1)`. See the [colors and branding](/docs/design/colors-branding) reference for more information.                                                         |
 | `date`    | An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string: `"2018-01-01T00:00:00.000Z"`                                                                                                            |
+| `file`    | A url to a hosted file.                                                                                                                                                                                    |
+| `image`   | A url to a hosted image.                                                                                                                                                                                   |
 | `list`    | An array of dynamic data. See [Lists](#lists)                                                                                                                                                              |
 | `action`  | A user action such as linking to another page, calling an API, etc. Your component will receive a function returning a promise. The promise will return when all of the associated actions have completed. |
 
@@ -238,17 +242,39 @@ Also see [Disabling List Controls](/docs/interactions/control-types#disabling-li
 
 > `listControl` is exclusive to props of type `list`
 
+### `accepted`
+
+- Type: `Array`
+
+This is used to set what file types are valid when a maker uses the `upload` method of selecting a file.
+
+These specifiers are the same as those that can be used with the `HTML5` `accept` attribute and can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers).
+
+:::note
+
+For security reasons, we do not accept executable or script files, including, but not limited to, `.exe`, `.sh`, `.js`, and `.jar`.
+
+:::
+
+> `accepted` is exclusive to props of type `file`
+
 ### `role`
 
 - Type: `String`
 
 Designate this as a special prop.
 
-| Key             | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listItem`      |      | This prop will be a list child: See [Lists](#lists)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `formValue`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |
-| `autosaveInput` |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue`                                                                                                                                                                                                                                 |
+| Key             | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `listItem`      |      | This prop will be a list child: See [Lists]()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `formValue`     |      | Instead of just the value itself, this prop will pass a `{ value, onChange, initial }` object that can be used like a React [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). `value` will initially be given the value passed to the prop and that value can be exported throughout the app (see [Component Data](https://developers.adalo.com/api-reference/configuration/manifest-json#component-data)). `onChange` is the event handler function that can be used to update `value`. `initial` is the initial value passed to the prop that will not change when `onChange` is called. |
+| `autosaveInput` |      | Instead of just the value itself, this prop will pass a `{ value, onChange }` object that can be used like a react [Controlled Component](https://reactjs.org/docs/forms.html#controlled-components). Value will be typed based on `type`, and `onChange` will be a function that takes a single argument, `newValue`                                                                                                                                                                                                                                                                                                       |
+
+:::note
+
+When using the `formValue` or `autosaveInput` roles, the `onChange` function should be passed the new value that you want the prop to take. The method of doing this varies slightly with a prop of type `image` or `file`. For more information, see [Files and Images](/docs/interactions/files-and-images).
+
+:::
 
 Also see [Control Types](/docs/interactions/control-types) for an explanation of the major uses of the `role` prop.
 

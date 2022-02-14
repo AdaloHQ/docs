@@ -144,6 +144,11 @@ Sometimes you want your component to actually directly modify values in the data
 
 Now, a prop `controlledValue` will be passed to the React component with the structure: `{ value: x, onChange: f() }`, where `value` is the value of that property in the database, and `onChange` is a function you can call to change that value.
 
+:::note
+
+Using the `onChange` function with the `file` or `image` datatype varies slightly. For more information, see [Files and Images](./files-and-images).
+
+:::
 It's a little tricky to test this prop because getting access to an individually adjustable prop isn't trivial. There are two quick ways to do this:
 
 - Add a property to the users table that is the same datatype as the property in your component. Then, log in the user somewhere on your test app and that component will then get access to "Logged in user => property".
