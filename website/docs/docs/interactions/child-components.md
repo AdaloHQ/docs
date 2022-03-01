@@ -45,3 +45,11 @@ In the editor, there will be a main accordion with the component's name and anot
   }
 }
 ```
+
+## Child Component Editor States
+
+Sometimes a child component corresponds to a specific state of the component. For example, Adalo's built-in list components have an empty state. When you open that child component in the editor,the component renders the empty state. This makes it much easier for makers to configure the empty state.
+
+Here's how it works - inside the editor, every component gets passed in a prop called `openAccordion`, which is the name of the child component that is currently open. The values are either `null`, `root`, or the name of the child component.
+
+Check out the code [here](https://github.com/AdaloHQ/material-components-library/blob/main/src/SimpleList/index.js#L127).
