@@ -10,3 +10,22 @@ If you created your library before March of 2022, you can generate this file by 
 :::
 
 From here, tweak whatever you need to, and then run `npx adalo update` to update your library listing.
+
+Here's what can be changed by this command:
+
+- `displayName`
+- `description`
+- `logo` (The image will get re-uploaded every time you run the command)
+- `author`
+- `supportURL`
+- `price` (This only applies to paid libraries)
+- `demoURL`
+- `requiresThirdPartySubscription`
+- `details`
+
+Here's what's stored in the `adalo.json` file, but is updated when you publish a new version of your library:
+
+- `components`
+- `iosInstallScript`
+- `androidInstallScript`
+- `webpackConfig`

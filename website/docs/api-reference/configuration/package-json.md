@@ -19,6 +19,10 @@ The package.json used to contain a lot of other information specific to Adalo, w
 }
 ```
 
+:::note
+The package.json will also have `description` and `author`, but Adalo references these in the `adalo.json` file for your listing.
+:::
+
 ## Keys
 
 ### `name`
