@@ -19,6 +19,7 @@ module.exports = {
       "docs/workflow/managing-public-libraries",
       "docs/workflow/managing-private-libraries",
       "docs/workflow/paid-libraries",
+      "docs/workflow/update-listing",
       "docs/workflow/backwards-compatibility",
     ],
     Design: [
@@ -48,6 +49,7 @@ module.exports = {
   "API Reference": {
     Configuration: [
       "api-reference/configuration/package-json",
+      "api-reference/configuration/adalo-json",
       "api-reference/configuration/manifest-json",
     ],
   },
