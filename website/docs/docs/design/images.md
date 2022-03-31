@@ -3,10 +3,6 @@ id: images
 title: Images
 ---
 
-:::note
-Currently there's an issue with using React Native's `Image` component with statically linked images, so you'll have to use React's `<img>` tag if you're trying to render a placeholder image in the editor.
-:::
-
 Sometimes, instead of rendering certain parts of your component in the editor, you may want to just render a placeholder image. For example, the maps component renders a static placeholder image instead of the actual maps component in the editor. See ["Component Rendering"](/docs/interactions/component-rendering) for more information on how to render a placeholder image in the editor.
 
 ## Using Images in Your Component
@@ -20,20 +16,16 @@ Use this example and React Native's [documentation](https://reactnative.dev/docs
 ```javascript
 // index.js
 import React, { Component } from "react";
-import { Image } from 'react-native'
+import { Image } from "react-native";
 
 class MyComponent extends Component {
   render() {
     const { image } = this.props;
-    return (
-        <Image
-						style={{ height: 100, width: 100 }}
-						source={image} 
-				/>
-    );
+    return <Image style={{ height: 100, width: 100 }} source={image} />;
   }
 }
 ```
+
 :::note
 `Image` components will only render if both width and height are specified. `img` tags will not render in the application preview.
 :::
