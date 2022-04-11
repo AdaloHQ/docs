@@ -29,6 +29,9 @@ exampleFunc = () => {
   if (exampleAction) exampleAction(fileArgument, imageArgument);
 };
 ```
+:::note
+When using the `formValue`, `autosaveInput`, or `actionArguments` roles, file validation is handled server side. We confirm that the file is not a script or executable and check that the file extension matches the file type. 
+:::
 
 :::note
 The `filename` field of the argument must contain the file extension. ex. .JPG, .PDF, .PNG, etc.
