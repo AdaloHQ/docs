@@ -82,10 +82,10 @@ For now, you must manually install your library into `mobile-previewer`. To do s
 - Open `mobile-previewer/package.json`, and add your package in the list of dependencies.
 - Instead of specifying a version, put the relative path to your package. For example, if I were trying to add my stopwatch component, I would add the line: `"stopwatch": "../stopwatch",` under dependencies.
 - Run `yarn` inside of `mobile-previewer`. Your package should be installed now.
-- If you're an Adalo developer working on an Adalo package, simply replace the version number with the relative path to the package locally.
+- If you're a developer working on an existing library, simply replace the version number with the relative path to the library locally.
 - If you're working on a custom component, and your library includes a package that has native code, you **must** add that package as a direct dependency. For example, when testing my `audio-player` component I must also add `react-native-track-player` as a direct dependency because that library has native code in it. This must be done for linking purposes.
-  :::important
-  Important: When Adalo builds your library from the component marketplace, we will automatically check to see if your library has dependencies that have native code, and will add them for you.
+  :::note
+  When Adalo builds your library from the component marketplace, we will automatically check to see if your library has dependencies that have native code, and will add them for you.
   :::
 
 Next, you must modify `mobile-previewer/libraries.js` so that Adalo will recognize your package as an Adalo library:
@@ -159,8 +159,8 @@ For now, you must manually install your library into `mobile-previewer`. To do s
 - Run `yarn` inside of `mobile-previewer`. Your package should be installed now.
 - If you're an Adalo developer working on an Adalo package, simply replace the version number with the relative path to the package locally.
 - If you're working on a custom component, and your library includes a package that has native code, you **must** add that package as a direct dependency. For example, when testing my `audio-player` component I must also add `react-native-track-player` as a direct dependency because that library has native code in it. This must be done for linking purposes.
-  :::important
-  Important: When Adalo builds your library from the component marketplace, we will automatically check to see if your library has dependencies that have native code, and will add them for you.
+  :::note
+  When Adalo builds your library from the component marketplace, we will automatically check to see if your library has dependencies that have native code, and will add them for you.
   :::
 
 Next, you must modify `mobile-previewer/libraries.js` so that Adalo will recognize your package as an Adalo library:

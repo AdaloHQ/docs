@@ -7,7 +7,7 @@ Sometimes, instead of rendering certain parts of your component in the editor, y
 
 ## Using Images in Your Component
 
-Inside a component's manifest, one of the [Adalo datatypes](/api-reference/configuration/manifest-json#type) you can use is the image datatype.
+Inside a component's manifest, one of the [Adalo datatypes](/docs/configuration/manifest-json#type) you can use is the image datatype.
 
 In order to use images in Adalo, you must import and use the `Image` component provided by React Native instead of React's `<img>` tag.
 

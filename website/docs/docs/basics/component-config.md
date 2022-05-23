@@ -9,4 +9,4 @@ There are a variety of "base-level props", such as default width, entry file, pa
 
 You can also include "Child Components", which have their own `props` object. Child components render as separate tabs in the editor, and are passed as nested objects to your React component.
 
-For more information, take a look at the various docs under "Design" and "Interactions", which detail more specific and hard-to-find configurations of the `manifest.json` file. Also take a look at the [API Reference](/api-reference/configuration/manifest-json).
+For more information, take a look at the various docs under "Design" and "Interactions", which detail more specific and hard-to-find configurations of the `manifest.json` file. Also take a look at the [configuration docs](/docs/configuration/manifest-json).

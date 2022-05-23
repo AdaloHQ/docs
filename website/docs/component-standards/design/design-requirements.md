@@ -2,7 +2,6 @@
 id: design-requirements
 title: Design Requirements
 ---
-
 Each library and component must follow some design rules in order to be approved:
 
 - Your library must have a logo. See the [library logo reference](/docs/standards/component-listing#logo) for more information.

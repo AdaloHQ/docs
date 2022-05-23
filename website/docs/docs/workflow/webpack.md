@@ -3,11 +3,12 @@ id: webpack
 title: Webpack
 ---
 
-:::important
+:::note
 This section is completely optional, and is not necessary in most use cases.
 :::
 
 ### Background
+
 Webpack is the bundler Adalo uses, and we supply a default config for every component library. In **most** cases, the default config will be all you need. There are some cases though where you may want to use your own webpack configuration.
 
 ### Add your own custom Webpack Configuration
@@ -42,22 +43,23 @@ If you choose to specify your own webpack config file, you are welcome to use th
 > This example expects you to have the Adalo CLI installed as a dev dependency of your component: `yarn add --dev @adalo/cli`
 
 ```javascript
-const webpack = require('webpack')
-const { AdaloDefaultConfig } = require('@adalo/cli/src/webpackConfig')
+const webpack = require("webpack");
+const { AdaloDefaultConfig } = require("@adalo/cli/src/webpackConfig");
 
 /**
- * Determine if we're in dev mode or production mode based on the 
+ * Determine if we're in dev mode or production mode based on the
  * build command: `adalo dev` or `adalo build`
  */
-const MODE = process.argv.includes('dev') ? 'DEVELOPMENT' : 'PRODUCTION';
+const MODE = process.argv.includes("dev") ? "DEVELOPMENT" : "PRODUCTION";
 
-if(MODE === "DEVELOPMENT"){
-    AdaloDefaultConfig.plugins.push(
-        // some development plugin
-    )
+if (MODE === "DEVELOPMENT") {
+  AdaloDefaultConfig.plugins
+    .push
+    // some development plugin
+    ();
 }
 
 // Modify defaultConfig as needed
 
-module.exports = AdaloDefaultConfig
+module.exports = AdaloDefaultConfig;
 ```

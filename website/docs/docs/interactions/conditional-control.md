@@ -9,7 +9,6 @@ There are times you want to enable or disable a prop based on specific parameter
 - Enabling/disabling whole child components
 
 ### Enabling/disabling specific props
-
 You can add `enabled` to an Adalo prop object, whose value is an object. See the example below:
 
 ```json
@@ -38,7 +37,6 @@ You can add `enabled` to an Adalo prop object, whose value is an object. See the
 `dependentOfParent` will only appear in the editor if `parentProp` is set to true.
 
 This will look like this in the editor:
-
 <img src="/img/enabled-prop.gif" alt='Enabled Prop Example' />
 
 ### Enabling/disabling whole child components
