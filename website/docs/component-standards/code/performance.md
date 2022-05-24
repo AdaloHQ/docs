@@ -7,5 +7,5 @@ In general, using your component should not lead to reduced performance of a mak
 
 - Excessive rendering of components.
 - `console.log` statements
-- Excessive api calls
+- Excessive API calls
 - Storing large amounts of data in memory

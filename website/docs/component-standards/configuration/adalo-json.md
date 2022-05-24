@@ -7,7 +7,7 @@ title: adalo.json
 This is a new feature, so make sure to upgrade to the latest version of the CLI to use it.
 :::
 
-The `adalo.json` file used to define information about your library. Every libraries `adalo.json` file should contain the following information:
+The `adalo.json` file used to define information about your library. Every library's `adalo.json` file should contain the following information:
 
 - `displayName`
 - `author`
