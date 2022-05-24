@@ -3,7 +3,7 @@ id: cross-platform
 title: Cross-Platform Compatibility
 ---
 
-As the [library standards](/docs/standards/philosophy) emphasize, it is **critical** that your component works across all platforms. Some technical points to help with this:
+As the [library standards](/component-standards/philosophy) emphasize, it is **critical** that your component works across all platforms. Some technical points to help with this:
 
 - Our mobile builds use React Native.
 - Anything on web can use React Native Web or React.
