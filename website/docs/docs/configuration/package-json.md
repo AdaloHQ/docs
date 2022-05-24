@@ -44,7 +44,7 @@ Additionally, when choosing a name for an unpublished library, also choose a nam
 - will not confuse others about authorship
 
 :::caution
-Once you have published your library you can **NOT** change your library name.
+Once you have published your library, you **CANNOT** change your library name.
 :::
 
 ### `version`
