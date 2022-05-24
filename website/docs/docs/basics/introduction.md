@@ -18,6 +18,7 @@ A component is an individual functional unit within Adalo. Text, buttons, and im
 To become an Adalo developer, you must [enable developer mode](enabling-dev-mode).
 
 ### Prerequisites
+
 In order to develop external components for Adalo, you must use macOS >= 10.10, or GNU/Linux kernel >= 2.6.32, and have [Node](https://nodejs.org) `>=10.2` installed. See [testing](../workflow/testing) for the prerequisites required to test on mobile.
 
 These docs assume you understand Javascript fundamentals and the [EMCAScript 2015](https://flaviocopes.com/ecmascript/) standard, and have a working knowledge of both [React](https://reactjs.org/) and [React Native](https://reactnative.dev/).
@@ -28,7 +29,7 @@ These docs assume you understand Javascript fundamentals and the [EMCAScript 201
 
 ### Standards
 
-In order to have your library accepted into the marketplace, you must make sure your component abides by our [standards](/docs/standards/philosophy). Most importantly, make sure that your component is:
+In order to have your library accepted into the marketplace, you must make sure your component abides by our [standards](/component-standards/philosophy). Most importantly, make sure that your component is:
 
 - Single-purpose. Each component should be designed to solve one specific use case.
 - Cross-platform. Each component should be compatible across web, iOS, and Android.
