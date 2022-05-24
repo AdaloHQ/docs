@@ -90,6 +90,7 @@ Child components are simply a way to organize your props into different sections
 
 The path to the icon for this component. This will be used as a thumbnail in the Components Panel. See the [thumbnail guidelines](/component-standards/component-listing/thumbnail) for information on the logo guidelines.
 
+
 #### Example Icon
 
 <img src="/img/example-icon.png" alt="Example icon for a Libraries Component" />

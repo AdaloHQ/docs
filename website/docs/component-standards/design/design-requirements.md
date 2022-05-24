@@ -11,3 +11,4 @@ Each library and component must follow some design rules in order to be approved
 - Component sizing should be dynamic to the device size. See [resizing](resizing) for more information.
 
 There are a variety of UX design requirements too. See the [UX design requirements](/component-standards/configuration/manifest-json) for more information.
+
