@@ -3,7 +3,7 @@ id: install-scripts
 title: Install Scripts
 ---
 
-:::important
+:::note
 This section is totally optional, and is only necessary if you need to edit the mobile builds directly.
 :::
 
@@ -52,6 +52,6 @@ bundleId=$BUNDLE_ID   # The bundle id is passed as an environment variable too.
 
 That should be everything you need to modify the build directly.
 
-:::note
+:::important
 Make sure to make your script executable, for example: `chmod +x ./scripts/ios.sh`. The permissions you place on your script will be what the build process uses.
 :::

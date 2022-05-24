@@ -1,6 +1,6 @@
 ---
-id: manifest
-title: Manifest
+id: manifest-json
+title: manifest.json
 ---
 
 There are several more specific standards having to do with manifest that all Adalo components must follow:

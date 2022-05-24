@@ -1,6 +1,6 @@
 ---
-id: code
-title: Code
+id: general-guidelines
+title: General Guidelines
 ---
 
 There are several specific standards regarding component code that Adalo components must follow:
@@ -10,4 +10,3 @@ There are several specific standards regarding component code that Adalo compone
 - When you publish, make sure your component doesn't have any `console.log` statements.
 - Backwards compatibility: app creators, as of now, always get the latest version of your component. In addition, there are currently no migration scripts. This means that components will have the old version of the props, even if it's running the new version of the code. See [backwards compatibility](/docs/workflow/backwards-compatibility) for more information on this.
 
-This list may grow organically over time.

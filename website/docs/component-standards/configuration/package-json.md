@@ -2,25 +2,9 @@
 id: package-json
 title: package.json
 ---
-
-Your `package.json` is the source for information about your package.
-
+<!-- TODO: this is the same as the other package.json page, is there any way to make them different -->
 :::caution
 The package.json used to contain a lot of other information specific to Adalo, which is now located in the `adalo.json` file.
-:::
-
-## Example
-
-```json
-{
-  "name": "example-library",
-  "version": "1.2.3",
-  "main": "index.js"
-}
-```
-
-:::note
-The package.json will also have `description` and `author`, but Adalo references these in the `adalo.json` file for your listing.
 :::
 
 ## Keys
@@ -44,7 +28,7 @@ Additionally, when choosing a name for an unpublished library, also choose a nam
 - will not confuse others about authorship
 
 :::caution
-Once you have published your library you can **NOT** change your library name.
+Once you have published your library, you **CANNOT** change your library name.
 :::
 
 ### `version`
@@ -57,6 +41,10 @@ For any changes to any of your Components `manifest.json`
 
 - Additions require a minor version upgrade: `1.0.0` => `1.1.0`
 - Removals or Heavy Modifications require a major version upgrade: `1.0.0` => `2.0.0`
+
+:::note
+For more information about `semver`, see [semver.org](https://semver.org/).
+:::
 
 ### `main`
 

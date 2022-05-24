@@ -38,7 +38,7 @@ Adalo components are built in React Native, and that means it’s easy to build 
 Examples:
 
 - ✅ Google maps component that works on Android, iOS, and Web
-- ✅ Maps component that uses Mapbox for Web, Google Maps on Android, and Apple Maps on Web
+- ✅ Maps component that uses Mapbox for Web, Google Maps on Android, and Apple Maps on iOS
 - ❌ Web-only mapbox component that cannot be used on other platforms
 
 ### Configurable
@@ -62,6 +62,7 @@ Adalo app creators and their users live in all parts of the world and all compon
 
 - All text should be configurable and not hard-coded
 - Components should support customization for other international standards such as dates and currencies.
+- Components should be accessible to all users
 
 Examples:
 

@@ -20,8 +20,8 @@ module.exports = {
           position: "left",
         },
         {
-          to: "api-reference/configuration/package-json",
-          label: "API Reference",
+          to: "component-standards/philosophy",
+          label: "Component Standards",
           position: "left",
         },
         {
@@ -48,8 +48,7 @@ module.exports = {
           items: [
             {
               label: "Slack",
-              href:
-                "https://join.slack.com/t/adalo-community/shared_invite/enQtNTUyMTcwNzE4NDE3LWVkMWNjY2MxNzhlMjE0Nzc5OTA5Y2Y0YjgwMGEyYzZiZDcwNGFiYjNmMWJmNTBjNDA3NTBjOTdiZmQ4NDVmMGE",
+              href: "https://join.slack.com/t/adalo-community/shared_invite/enQtNTUyMTcwNzE4NDE3LWVkMWNjY2MxNzhlMjE0Nzc5OTA5Y2Y0YjgwMGEyYzZiZDcwNGFiYjNmMWJmNTBjNDA3NTBjOTdiZmQ4NDVmMGE",
             },
             {
               label: "Forum",

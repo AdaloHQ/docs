@@ -19,4 +19,14 @@ Must have
 - "version" property
 - "adalo" unique property
 
-See [package.json](/api-reference/configuration/package-json) for more information on these properties.
+Additionally, public components must have
+
+- "supportURL" property
+- "requiresThirdPartySubscription" property
+
+And paid components must have
+
+- "demoURL" property
+- "price" property
+
+See [package.json](/docs/configuration/package-json) and [adalo.json](/docs/configuration/adalo-json) for more information on these properties.

@@ -28,7 +28,7 @@ You can find more information in the [Creating a Component](/docs/basics/create-
 
 Now, when you log in to your account on Adalo's website and open an app, a new tab will show up in the components panel at the bottom labelled "Development". Your new component will show up here.
 
-Inside your component, you will find a folder labelled `src`, and inside there a folder for the name of your first component. Inside, you'll find two files: `manifest.json` and `index.js`. The `manifest.json` contains all of the configuration for your component. Adalo's editor parses this file and uses it to generate the settings on the left panel in the editor, and each prop inside the manifest is passed down to your component as a React prop. See the [API Reference](/api-reference/configuration/manifest-json) for more information.
+Inside your component, you will find a folder labelled `src`, and inside there a folder for the name of your first component. Inside, you'll find two files: `manifest.json` and `index.js`. The `manifest.json` contains all of the configuration for your component. Adalo's editor parses this file and uses it to generate the settings on the left panel in the editor, and each prop inside the manifest is passed down to your component as a React prop. See the [configuration docs](/docs/configuration/manifest-json) for more information.
 
 Edits to `index.js` are automatically reflected in the editor; however, changes to the `manifest.json` will only show up in the editor after a refresh (pressing `^C` in the terminal and running `npx adalo dev` again).
 
@@ -44,4 +44,4 @@ Once you finish writing your code, you can run `npx adalo publish` to publish yo
 
 And that's the Adalo component development cycle! Next, continue reading through the basics to get a better overview of what was talked about here and more. Then, see the other tabs for more specific information on different Adalo's library component API.
 
-The [API Reference](/api-reference/configuration/package-json) catalogues every possible configuration of the library's `package.json`, as well as the component's `manifest.json`.
+The [configuration docs](/docs/configuration/package-json) catalogues every possible configuration of the library's `package.json`, as well as the component's `manifest.json`.

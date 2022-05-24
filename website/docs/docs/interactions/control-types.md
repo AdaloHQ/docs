@@ -34,7 +34,7 @@ Which will make the number input look like this in the editor:
 
 Each `control` object has the key `type`, which corresponds to the control type. The other values inside the control object differ depending on the control type.
 
-You can find a full list of control types in the [component manifest](/api-reference/configuration/manifest-json), but here are a few other common control types:
+You can find a full list of control types in the [component manifest](/docs/configuration/manifest-json), but here are a few other common control types:
 
 ### Menu
 
@@ -93,7 +93,7 @@ One data type a prop can be is a list, and often you want other props to be able
 In order to access the current list item as magic text within the action, you must specify both `role` and `reference`.
 `role` should be set to `listItem`, and `reference` should be set to the name of the list property, in this case `"listProp"`.
 
-You can find more information about this in the [component manifest](https://developers.adalo.com/api-reference/configuration/manifest-json#role) documentation.
+You can find more information about this in the [component manifest](/docs/configuration/manifest-json#role) documentation.
 
 ## Disabling List Controls
 
@@ -121,43 +121,4 @@ To this, where the `sort` and `filter` controls have been disabled:
 
 <img src="/img/List-Control-Filter&Sort-Disabled.png" />
 
-You can find more information about the `listControl` prop and the different list controls in the [component manifest](/api-reference/configuration/manifest-json#listcontrol) documentation.
-
-## Modifying Values in the Database
-
-Sometimes you want your component to actually directly modify values in the database. For example, a switch component would be pretty useless if it couldn't switch a property in the database. All you have to do to get access to the database is add the role `autosaveInput` to a component. For example:
-
-```json
-{
-  ...
-  "props": [
-    {
-      "name": "controlledValue",
-      "displayName": "What Property Does This Adjust?",
-      "type": "number",
-      "role": "autosaveInput"
-    },
-  ]
-}
-
-```
-
-Now, a prop `controlledValue` will be passed to the React component with the structure: `{ value: x, onChange: f() }`, where `value` is the value of that property in the database, and `onChange` is a function you can call to change that value.
-
-:::note
-
-Using the `onChange` function with the `file` or `image` datatype varies slightly. For more information, see [Files and Images](./files-and-images).
-
-:::
-It's a little tricky to test this prop because getting access to an individually adjustable prop isn't trivial. There are two quick ways to do this:
-
-- Add a property to the users table that is the same datatype as the property in your component. Then, log in the user somewhere on your test app and that component will then get access to "Logged in user => property".
-- Make a list, and then make a click property of that list link the user to another screen. The next screen will then have access to the individual props of current list item.
-
-Here's what the first one looks like in the editor:
-
-<img src="/img/autosaveInput-example-loggedInUser.png" alt='Autosave Input Example' />
-
-And here's what the second one looks like in the editor:
-
-<img src="/img/autosaveInput-example-lists.png" alt='Autosave Input Example' />
+You can find more information about the `listControl` prop and the different list controls in the [component manifest](/docs/configuration/manifest-json#listcontrol) documentation.
