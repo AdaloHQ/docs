@@ -81,10 +81,6 @@ You cannot convert your library from public to private, and vice versa. Contact 
 
 Provide a link to an Adalo app here that showcases components in your library. Makers will be able to see this link on the Marketplace feed.
 
-:::note
-This is optional for free libraries, but is required for paid libraries.
-:::
-
 ### `supportURL`
 
 URL to a link where a maker can find support for your library, or contact you for more information.
