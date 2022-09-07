@@ -13,6 +13,7 @@ The `adalo.json` file used to define information about your library. Every libra
 - `author`
 - `description`
 - `logo`
+- `demoAppURL`
 - `supportURL`
 - `requiresThirdPartySubscription`
 - `components`
@@ -20,7 +21,6 @@ The `adalo.json` file used to define information about your library. Every libra
 Additionally, all paid libraries should also contain the following:
 
 - `price`
-- `demoAppURL`
 
 You can also include the following optional fields:
 
