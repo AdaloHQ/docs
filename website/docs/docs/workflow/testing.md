@@ -184,6 +184,8 @@ This section will organically grow over time as developers run into more build i
   - Update gradle. To do so, open `mobile-previewer/android/gradle/wrapper/gradle-wrapper.properties`. Change `distributionUrl` to be: `distributionUrl=https\://services.gradle.org/distributions/gradle-6.3-all.zip`.
 - If you run into an error that looks like "Missing SDK path".
   - Add a new file `mobile-previewer/android/local.properties`, which will only have one line: `sdk.dir=/path/to/android/sdk/locally`. On mac, this path will look like `/Users/username/Library/Android/sdk`, where `username` is your username. 
+- If you run into an error that looks like `Execution failed for task ':react-native-action-sheet:javaPreCompileDebug'.`, or `Failed to transform react-native-0.71.0-rc.0-debug.aar`:
+  - Open `package.json` and under `dependencies`, set the `react-native` version to `0.63`, i.e. change the line to `"react-native": "0.63",`.
 
 
   </TabItem>
