@@ -1,4 +1,5 @@
 # Adalo Docs
+
 Documentation for creating Adalo libraries
 
 ## Creating Libraries
@@ -40,7 +41,6 @@ In `package.json` you need to add an additional section called `"adalo"` that wi
 
 See the [Component Manifest Documentation](https://github.com/AdaloHQ/docs/blob/main/libraries/Manifests.md) to learn what to put inside your manifest.json file.
 
-
 ## Testing Locally
 
 In order to test your package locally, you need to add a package dependency to your project:
@@ -58,10 +58,9 @@ yarn add @adalo/cli
 Then, to run the package locally, to make it accessible in Adalo, run:
 
 ```
-npx adalo dev
+npx @adalo/cli dev
 ```
 
 The first time you run this, you'll be asked to login using your Adalo account. This is in order to allow you to use the package in your account on Adalo.
 
 After you've successfully logged in and run `npx proton dev` again, you can go to Adalo and click the Add Layer button and you should see your package available at the bottom of the list of components.
-

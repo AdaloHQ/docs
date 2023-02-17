@@ -26,10 +26,10 @@ To do so, run in your shell:
 
 ```bash
 # login with your adalo credentials
-npx adalo login
+npx @adalo/cli login
 
 # start the development server
-npx adalo dev
+npx @adalo/cli dev
 ```
 
 Now, when you add a component on Adalo, you will see a new tab called "development" with your component.
