@@ -6,7 +6,7 @@ title: Publishing
 Publishing your awesome new Library to Adalo is very simple! Simply run the `publish` command while in the root of your Library directory:
 
 ```bash
-npx adalo publish
+npx @adalo/cli publish
 ```
 
 ## Requirements
