@@ -38,7 +38,7 @@ When you press "preview" on an Adalo app with your component in the editor, you 
 
 ### Publishing your library
 
-Once you finish writing your code, you can run `npx adalo publish` to publish your library. See [publishing](publishing) for more information.
+Once you finish writing your code, you can run `npx @adalo/cli publish` to publish your library. See [publishing](publishing) for more information.
 
 ### Conclusion
 
