@@ -112,19 +112,6 @@ The layout property is used for responsive components. It can define the compone
 
 - See Layout Configuration for supported values of `shared` property.
 
-### Example Layout
-
-```json
-{
-  "displayName": "Component",
-  "layout": {
-    "sticky": true,
-    "shared": "FIXED_LEFT",
-    "mobile": "SCALES_RELATIVE"
-  }
-}
-```
-
 ### Layout Configuration
 
 | Name            | Width Resizing     | Anchored       |
@@ -143,6 +130,19 @@ The layout property is used for responsive components. It can define the compone
 | \_screenHeight | number                            | Provides the current screen height in editor or device height in runner. |
 | \_screenWidth  | number                            | Provides the current screen width in editor or device width in runner.   |
 | \_layoutGuides | { top: number, bottom: number }   | Provides Safe Area Inset values for `top` and `bottom`                   |
+
+### Example Layout
+
+```json
+{
+  "displayName": "Component",
+  "layout": {
+    "sticky": true,
+    "shared": "FIXED_LEFT",
+    "mobile": "SCALES_RELATIVE"
+  }
+}
+```
 
 ## Props
 
