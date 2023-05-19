@@ -111,10 +111,10 @@ This section will organically grow over time as developers run into more build i
   - Make sure Node is properly installed. Run `node -v`. If this fails, download and run the node js installer from their website.
 - `pod install` fails with an error that looks like "SDK "iphoneos" cannot be located"
 
-  - You likely installed XCode's command line tools separately before installing XCode's editor. See [this](https://www.ryadel.com/en/xcode-sdk-iphoneos-cannot-be-located-mac-osx-error-fix/) post for more details.
+- You likely installed XCode's command line tools separately before installing XCode's editor. See [this](https://www.ryadel.com/en/xcode-sdk-iphoneos-cannot-be-located-mac-osx-error-fix/) post for more details.
 
-  </TabItem>
-  <TabItem value="android">
+</TabItem>
+<TabItem value="android">
 
 ## Android
 
@@ -189,7 +189,7 @@ This section will organically grow over time as developers run into more build i
   - Add a new file `mobile-previewer/android/local.properties`, which will only have one line: `sdk.dir=/path/to/android/sdk/locally`. On mac, this path will look like `/Users/username/Library/Android/sdk`, where `username` is your username.
 - If you run into an error that looks like `Execution failed for task ':react-native-action-sheet:javaPreCompileDebug'.`, or `Failed to transform react-native-0.71.0-rc.0-debug.aar`:
 
-  - Open `package.json` and under `dependencies`, set the `react-native` version to `0.63`, i.e. change the line to `"react-native": "0.63",`.
+- Open `package.json` and under `dependencies`, set the `react-native` version to `0.63`, i.e. change the line to `"react-native": "0.63",`.
 
-    </TabItem>
-  </Tabs>
+</TabItem>
+</Tabs>
