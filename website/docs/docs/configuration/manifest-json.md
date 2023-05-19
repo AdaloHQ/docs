@@ -90,10 +90,59 @@ Child components are simply a way to organize your props into different sections
 
 The path to the icon for this component. This will be used as a thumbnail in the Components Panel. See the [thumbnail guidelines](/component-standards/component-listing/thumbnail) for information on the logo guidelines.
 
-
 #### Example Icon
 
 <img src="/img/example-icon.png" alt="Example icon for a Libraries Component" />
+
+## `layout`
+
+- Type: `Object`
+
+The layout property is used for responsive components. It can define the component resizing across different screen sizes and set the component's position on the screen.
+
+### Properties
+
+| Name      | Type    | Description                                                                                          |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| `sticky`  | boolean | decides whether the component will be absolutely positioned or relative.                             |
+| `shared`  | string  | Layout Settings that will be shared across all breakpoints that do not have a Custom Layout Setting. |
+| `desktop` | string  | Custom Layout Setting for Desktop Breakpoint. See Layout Configuration for supported values.         |
+| `tablet`  | string  | Custom Layout Setting for Tablet Breakpoint. See Layout Configuration for supported values.          |
+| `mobile`  | string  | Custom Layout Setting for Mobile Breakpoint. See Layout Configuration for supported values.          |
+
+- See Layout Configuration for supported values of `shared` property.
+
+### Example Layout
+
+```json
+{
+  "displayName": "Component",
+  "layout": {
+    "sticky": true,
+    "shared": "FIXED_LEFT",
+    "mobile": "SCALES_RELATIVE"
+  }
+}
+```
+
+### Layout Configuration
+
+| Name            | Width Resizing     | Anchored       |
+| --------------- | ------------------ | -------------- |
+| SCALES_RELATIVE | Scales with Screen | Center         |
+| SCALES_FIXED    | Scales with Screen | Left and Right |
+| FIXED_LEFT      | Fixed              | Left           |
+| FIXED_RIGHT     | Fixed              | Right          |
+| FIXED_CENTER    | Fixed              | CENTER         |
+
+#### Additional Props
+
+| Name           | Type                              | Description                                                              |
+| -------------- | --------------------------------- | ------------------------------------------------------------------------ |
+| \_deviceType   | "mobile" \| "tablet" \| "desktop" | Provides the current device.                                             |
+| \_screenHeight | number                            | Provides the current screen height in editor or device height in runner. |
+| \_screenWidth  | number                            | Provides the current screen width in editor or device width in runner.   |
+| \_layoutGuides | { top: number, bottom: number }   | Provides Safe Area Inset values for `top` and `bottom`                   |
 
 ## Props
 

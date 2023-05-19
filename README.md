@@ -57,8 +57,14 @@ yarn add @adalo/cli
 
 Then, to run the package locally, to make it accessible in Adalo, run:
 
+```bash
+adalo dev
 ```
-npx @adalo/cli dev
+
+or:
+
+```bash
+npx adalo dev
 ```
 
 The first time you run this, you'll be asked to login using your Adalo account. This is in order to allow you to use the package in your account on Adalo.
