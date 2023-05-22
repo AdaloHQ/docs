@@ -16,10 +16,10 @@ npx create-adalo-component my-component
 cd my-component
 
 # login with your adalo credentials
-npx @adalo/cli login
+npx adalo login
 
 # start the development server
-npx @adalo/cli dev
+npx adalo dev
 ```
 
 ...then go to Adalo and add a new component to one of your screens. In the **Add** menu you should see a new section called "Development" where you'll find your new component.
