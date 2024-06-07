@@ -480,7 +480,7 @@ If you have the following in your `manifest.json` file:
 ```json
 {
   ...,
-  childComponents: [
+  "childComponents": [
     {
       "name": "rightIcon",
       "displayName": "Right Icon",
@@ -562,7 +562,7 @@ The easiest way to understand this is by looking at a simple example. Let's say 
       "type": "list"
     }
   ],
-  "childComponents: [
+  "childComponents": [
   	 {
   	   "name": "itemTitle",
   	   "role": "listItem",
