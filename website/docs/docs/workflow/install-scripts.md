@@ -31,7 +31,11 @@ The way you can edit builds in Adalo is by using **install scripts**. In the `ad
 
 These scripts can be written in either javascript or typescript, and are run with the `Deno` typescript runtime: https://deno.com/
 
-We run these scripts with read and write permissions to the mobile build project path, and some environment variables and run commands allowed:
+We run these scripts with the following permissions:
+
+- Read and write access to the mobile build project path
+- Access to run `plutil` and `/usr/libexec/PlistBuddy`
+- Access to reading environment variables with the project parameters
 
 ```bash
 deno run \
@@ -85,6 +89,6 @@ That should be everything you need to modify the build directly.
 
 We're using Deno v1.44.1
 
-Check Deno's docs to understand the permissions your script has when running on our build servers: (Permissions)[https://docs.deno.com/runtime/manual/basics/permissions]
+Check Deno's docs to understand the permissions your script has when running on our build servers: [Permissions](https://docs.deno.com/runtime/manual/basics/permissions)
 
 :::
