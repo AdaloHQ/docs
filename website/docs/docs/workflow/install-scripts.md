@@ -9,7 +9,7 @@ This section is totally optional, and is only necessary if you need to edit the 
 
 In some cases, you may want to edit the mobile build whenever your component is installed. For example, the audio player component needs to add a setting under an iOS build's info.plist to enable background audio.
 
-The way you can edit builds in Adalo is by using **install scripts**. In the `package.json` under the `adalo` property, you can add install scripts for iOS and Android like so:
+The way you can edit builds in Adalo is by using **install scripts**. In the `adalo.json` or in the `package.json` under the `adalo` property, you can add install scripts for iOS and Android like so:
 
 ```json {12,13}
 {
@@ -23,35 +23,72 @@ The way you can edit builds in Adalo is by using **install scripts**. In the `pa
       }
     ],
     "logo": "./logo.png",
-    "iosInstallScript": "./relativePath/to/script/here",
-    "androidInstallScript": "./relativePath/to/script/here",
+    "iosInstallScript": "./relativePath/to/script/here.ts",
+    "androidInstallScript": "./relativePath/to/script/here.ts",
   }
 }
 ```
 
-These scripts can be written in either bash or node, and have direct access to the mobile build.
+These scripts can be written in either javascript or typescript, and are run with the `Deno` typescript runtime: https://deno.com/
 
-You can use these variables to get different paths:
+We run these scripts with the following permissions:
+
+- Read and write access to the mobile build project path
+- Access to run `plutil` and `/usr/libexec/PlistBuddy`
+- Access to reading environment variables with the project parameters
 
 ```bash
-project_path=$(pwd)   # Path to the mobile build
-
-dir=$(dirname "${0}") # Directory of the install script. You can use this to call
-                      # other scripts in the same directory
+deno run \
+  --allow-read=/path/to/your/app/project \
+  --allow-write=/path/to/your/app/project \
+  --allow-env="ADALO_APP_PROJECT_PATH,ADALO_APP_PROJECT_NAME,ADALO_APP_PLATFORM,ADALO_APP_BUNDLE_ID" \
+  --allow-run=plutil,/usr/libexec/PlistBuddy \
+  scripts/installIos.ts
 ```
 
-You can also get a few variables through environment variables:
+You can access the environment variables from the install scripts with `Deno.env.getEnv` :
 
-```bash
-name=$PROJECT_NAME    # Name of the project (Can be used on iOS to get to
-                      # certain directories)
+```typescript
 
-bundleId=$BUNDLE_ID   # The bundle id is passed as an environment variable too.
-                      # Used on Android instead of project name.
+const projectPath = Deno.env.get('ADALO_APP_PROJECT_PATH') // The path of the mobile build project
+
+const projectName = Deno.env.get('ADALO_APP_PROJECT_NAME')  // The name of the project, it can be used in iOS to access certain directories
+
+const bundleId = Deno.env.get('ADALO_APP_BUNDLE_ID') // The bundle id is passed too, used in android instead of the project name
+
+const platform = Deno.env.get('ADALO_APP_PLATFORM') // "ios" or "android"
+
+```
+
+If you need to use `plutil` or `/usr/libexec/PlistBuddy` to edit your iOS app's `Info.plist`, you can do so from your scripts with `Deno.Command`:
+
+```typescript
+
+  import { join } from "https://deno.land/std@0.224.0/path/mod.ts"
+
+  const projectPath = Deno.env.get('ADALO_APP_PROJECT_PATH')
+  const projectName = Deno.env.get('ADALO_APP_PROJECT_NAME')
+
+  const infoPlistPath = join(projectPath, `ios/${projectName}/Info.plist`)
+
+
+  const proc = await new Deno.Command("plutil", [
+  "-insert",
+  "UIBackgroundModes",
+  "-xml",
+  "<array><string>audio</string></array>",
+  infoPlistPath,
+]).output();
+
+
 ```
 
 That should be everything you need to modify the build directly.
 
 :::important
-Make sure to make your script executable, for example: `chmod +x ./scripts/ios.sh`. The permissions you place on your script will be what the build process uses.
+
+We're using Deno v1.44.1
+
+Check Deno's docs to understand the permissions your script has when running on our build servers: [Permissions](https://docs.deno.com/runtime/manual/basics/permissions)
+
 :::
